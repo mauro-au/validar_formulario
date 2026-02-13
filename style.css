@@ -1,6 +1,30 @@
-body{font-family: sans-serif; background-color: #6e9e41; box-sizing: border-box;}
+body {
+    font-family: sans-serif;
+    background-color: #6e9e41;
+    box-sizing: border-box;
+}
 
-form{
+.content {
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+
+    .content_left {
+        border-radius: 25px 0 0 25px;
+        background: cadetblue;
+        width: 60%;
+    }
+    
+    .content_right {
+        border-radius: 0 25px 25px 0;
+        width: 40%;
+        background: url('assets/img/landscape.jpg') no-repeat;
+        background-size: cover;
+    }
+}
+
+form {
     background-color: rgb(224, 223, 223);
     border-radius: 10px;
     color: rgb(255, 255, 255);
@@ -9,7 +33,8 @@ form{
     margin: 0 auto;
     width: 300px;
 }
-input{
+
+input {
     border-radius: 3px;
     outline: none;
     margin-bottom: 10px;
@@ -17,17 +42,21 @@ input{
     width: 280px;
     height: 30px;
 }
-.inputcss{
+
+.inputcss {
     border: solid 1px #ccc;
     padding: 10px;
 }
-.inputcss:focus{
-    border-color:  rgb(124, 193, 250);
+
+.inputcss:focus {
+    border-color: rgb(124, 193, 250);
 }
-.center-content{
+
+.center-content {
     text-align: center;
 }
-h1{
+
+h1 {
     text-align: center;
     color: rgb(255, 255, 255);
 }

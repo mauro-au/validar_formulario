@@ -1,47 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Desafío I - Formulario de Validación</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="content">
-        <div class="content_left">
-            <form action="/" method="POST">
-                <h1>Formulario de registro</h1>
-                <fieldset>
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name" placeholder="Juan Juan">
+      <div class="content_left">
+        <form action="/" method="POST">
+          <h1>Formulario de registro</h1>
+          <fieldset>
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Juan Juan"
+              maxlength="30"
+							title="Ingrese tu nombre"
+              required
+              autofocus
+            />
 
-                    <label for="lastName">Apellidos</label>
-                    <input type="text" id="lastName" placeholder="Acevedo Acevedo">
+            <label for="surnames">Apellidos</label>
+            <input
+              type="text"
+              id="surnames"
+              name="surnames"
+              placeholder="Acevedo Acevedo"
+              maxlength="80"
+							title="Ingrese tus Apellidos"
+              required
+            />
 
-                    <label for="email">email</label>
-                    <input type="email" id="email" placeholder="ejemplo@ejemplo.com">
+            <label for="email">email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ejemplo@ejemplo.com"
+              maxlength="100"
+							title="Ingrese tu correo electrónico"
+              required
+            />
 
-                    <label for="userName">Nombre de usuario</label>
-                    <input type="email" id="userName" placeholder="juancho">
+            <label for="userName">Nombre de usuario</label>
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              placeholder="juancho"
+              maxlength="20"
+							title="Ingrese su nombre de usuario"
+              required
+            />
 
-                    <label for="password">Contraseña</label>
-                    <input type="password" id="password" placeholder="*********">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="*********"
+							title="Ingrese una contraseña segura"
+              required
+            />
 
-                    <label for="phone">Teléfono</label>
-                    <input type="tel" id="phone" placeholder="+56 9 911111111">
+            <label for="phone">Teléfono</label>
+            <input
+              type="tel"
+              id="phone"
+              name="tel"
+              placeholder="+56 9 911111111"
+              maxlength="15"
+              pattern="[0-9]{9,15}"
+              title="Ingrese tu numero telefónico "
+              required
+            />
 
-                    <button type="submit">Registrar</button>
-                </fieldset>
-            </form>
-        </div>
-        <div class="content_rigth"></div>
+            <button type="submit">Registrar</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="content_right">
+				<div class="content_rigth-image">
+				</div>
+			</div>
     </div>
 
     <script type="text/javascript" src="script.js"></script>
-</body>
-
+  </body>
 </html>
