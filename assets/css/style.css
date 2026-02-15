@@ -3,16 +3,19 @@
 :root {
     --color-primary: #0F1B1B;
     --color-secondary: #1ED860;
+    --color-text: #6e848d;
+    --color-body: #1C322D;
+    --color-input: #1B272C;
 }
 
 body {
     font-family: sans-serif;
-    background-color: #182727;
+    background: var(--color-body);
 }
 
 .content {
-    width: 70%;
-    margin: 0 auto;
+    width:60%;
+    margin: 20px auto;
     display: flex;
     background: var(--color-primary);
     border-radius: 25px;
@@ -46,7 +49,7 @@ form {
         flex-direction: column;
 
         label {
-            color: #6e848d;
+            color: var(--color-text);
         }
 
         input {
@@ -55,8 +58,12 @@ form {
             padding: 15px;
             margin-top: 10px;
             margin-bottom: 20px;
-            background-color: #1B272C;
-            color: #8f8f8f;
+            background-color: var(--color-input);
+            color: var(--color-text);
+        }
+
+        input::placeholder {
+            opacity: .4;
         }
 
         button {
@@ -91,7 +98,8 @@ form {
     }
 
     span {
-        color: #8f8f8f;
+        color: var(--color-text);
+        margin-left: 5px;
         font-size: 13px;
 
         a {
@@ -103,7 +111,7 @@ form {
 
 .login {
     text-align: center;
-    color: #6e848d;
+    color: var(--color-text);
     margin-bottom: 30px;
     margin-top: 10px;
     font-size: 13px;
