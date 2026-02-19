@@ -161,3 +161,51 @@ form {
         }
     }
 }
+
+.container_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    box-sizing: content-box;
+    border: none;
+    margin: 0;
+}
+
+.modal_content {
+    background: #fff;
+    border: none;
+    border-radius: 25px;
+    width: 45%;
+    height: 400px;
+    display: flex;
+    padding: 0;
+
+    .content_left {
+        width: 45%;
+        background: url('../img/modal.jpg') no-repeat center;
+        background-size: cover;
+        border-radius: 25px 0 0 25px;
+    }
+
+    .content_right {
+        padding: 25px;
+        width: 55%;
+
+        .modalActions {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+
+            .closeModal {
+                cursor: pointer;
+            }
+        }
+    }
+}

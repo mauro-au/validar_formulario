@@ -8,7 +8,13 @@ const checkbox = document.querySelector("#checkbox");
 const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.closeModal');
 const modalContent = document.querySelector('.modalContent');
+const fechaActual = document.querySelector('.fecha_actual');
 
+const clearModal = () => {
+  while (modalContent.firstChild) {
+    modalContent.removeChild(modalContent.firstChild)
+  }
+}
 
 const clearInputs = () => {
   name.value = ''
@@ -34,10 +40,28 @@ const getValue = () => {
   modal.showModal();
 };
 
-const createError = (parent, errorText) => {
+const createError = (parent, message) => {
   const newSmall = document.createElement("small");
-  newSmall.textContent = errorText;
+  newSmall.textContent = message;
   parent.appendChild(newSmall);
+};
+
+const validator = (input, validate, message = "El campo no puede estar vacío") => {
+  const parent = input.parentElement;
+  const existingError = parent.querySelector("small");
+
+  if (validate) {
+    input.classList.add("input-error");
+    if (!existingError) {
+      createError(parent, message);
+    } else {
+      existingError.textContent = message;
+    }
+    return;
+  }
+
+  input.classList.remove("input-error");
+  existingError?.remove();
 };
 
 const validateEmail = (email) => {
@@ -49,25 +73,6 @@ const validatePhone = (phone) => {
   const regex = /^\+56 9 \d{8}$/;
   return regex.test(phone);
 };
-
-
-const validator = (input, validate, textError = "El campo no puede estar vacío") => {
-  const parent = input.parentElement;
-  const small = parent.querySelector("small");
-
-  if (validate) {
-    input.classList.add("input-error");
-    if (!small) {
-      return createError(parent, textError);
-    } else {
-      return small.textContent = textError;
-    }
-  }
-
-  input.classList.remove("input-error");
-  if (small) small.remove();
-};
-
 
 // Agregar validación en tiempo real a cada campo
 name.addEventListener("input", () => validator(name, name.value === "" ? true : false));
@@ -101,11 +106,13 @@ form.addEventListener("submit", (e) => {
     password.value
   ) {
     getValue();
-    clearInputs()
   }
+  fechaActual.innerHTML = new Date().toLocaleString();
 });
-
 
 closeBtn.addEventListener('click', () => {
   modal.close()
+  clearInputs()
+  clearModal()
 });
+
