@@ -9,8 +9,15 @@
 
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+  <!-- Modal de confirmación -->
+  <dialog class="modal">
+    <h2>Título del Modal</h2>
+    <div class="modalContent"></div>
+    <div class="modalActions">
+      <button class="closeModal" type="button">Cerrar</button>
+    </div>
+  </dialog>
 
-<body>
   <main class="content">
     <section class="content_left">
       <figure class="avatar">
@@ -18,33 +25,36 @@
       </figure>
 
       <form action="/" method="POST">
-
         <fieldset>
-          <label for="name">Nombre completo</label>
-          <input type="text" id="name" name="name" placeholder="Juan Jimenez" maxlength="100"
-            title="Ingrese tu nombre completo" required autofocus />
+          <label>
+            Nombre completo
+            <input type="text" id="name" name="name" placeholder="Juan Jimenez" maxlength="100" title="Ingrese tu nombre completo" required autofocus />
+          </label>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" maxlength="100"
-            title="Ingrese tu correo electrónico" required />
+          <label>
+            Email
+            <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" maxlength="100" title="Ingrese tu correo electrónico" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required />
+          </label>
 
-          <label for="phone">Teléfono</label>
-          <input type="tel" id="phone" name="tel" placeholder="+56 9 911111111" maxlength="15" pattern="[0-9]{9,15}"
-            title="Ingrese tu numero telefónico " required />
+          <label>Teléfono
+            <input type="tel" id="phone" name="tel" placeholder="+56 9 911111111" maxlength="14" pattern="^\+56 9 \d{8}$" oninput="this.value = this.value.replace(/[^+0-9 ]/g, '');" title="Ingrese tu numero telefónico" required />
+          </label>
 
-          <label for="userName">Nombre de usuario</label>
-          <input type="text" id="userName" name="userName" placeholder="juancho" maxlength="20"
-            title="Ingrese su nombre de usuario" required />
+          <label>
+            Nombre de usuario
+            <input type="text" id="userName" name="userName" placeholder="juancho" maxlength="20" title="Ingrese su nombre de usuario" required />
+          </label>
 
-          <label for="password">Contraseña</label>
-          <input type="password" id="password" name="password" placeholder="*********"
-            title="Ingrese una contraseña segura" required />
+          <label>
+            Contraseña
+            <input type="password" id="password" name="password" placeholder="*********" title="Ingrese una contraseña segura" minlength="8" maxlength="20" required />
+          </label>
 
           <div class="checbox">
-            <input type="checkbox" required>
+            <input type="checkbox" id="checkbox" required>
             <span>Acepto los <a href="#">Términos & Condiciones</a></span>
           </div>
-          <button type="submit">Registrar</button>
+          <button class="register" type="submit">Registrar</button>
         </fieldset>
         <p class="login">¿Ya tienes una cuenta? <a href="#">Ingresa</a></p>
       </form>
@@ -76,8 +86,16 @@
       </div>
     </section>
   </main>
+  <dialog id="modal">
+    <div class="modalContent">
+      <h2>Título del Modal</h2>
+      <p>Contenido del modal...</p>
+    </div>
+    <button id="closeModal">Cerrar</button>
+  </dialog>
 
-  <script type="text/javascript" src="assets/js/script.js"></script>
+  <!-- <script type="text/javascript" src="assets/js/script.js"></script> -->
+  <script type="text/javascript" src="assets/js/script2.js"></script>
 </body>
 
 </html>

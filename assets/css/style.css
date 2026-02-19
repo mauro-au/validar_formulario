@@ -61,23 +61,46 @@ form {
 
         label {
             color: var(--color-text);
+            position: relative;
+
+            input {
+                border-radius: 18px;
+                border: 2px solid transparent;
+                outline: none;
+                padding: 15px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                background-color: var(--color-input);
+                color: var(--color-text);
+                width: 100%;
+            }
+
+            input::placeholder {
+                opacity: .4;
+            }
+
+            input:focus {
+                border: 2px solid var(--color-secondary);
+            }
+
+            .input-error {
+                border: 2px solid red !important;
+            }
+
+            small {
+                color: red;
+                position: absolute;
+                display: block;
+                bottom: -6px;
+                right: 0;
+            }
         }
 
-        input {
-            border-radius: 18px;
-            border: none;
-            padding: 15px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            background-color: var(--color-input);
-            color: var(--color-text);
-        }
-
-        input::placeholder {
-            opacity: .4;
-        }
 
         .checbox {
+            margin-top: 10px;
+            margin-bottom: 20px;
+
             input[type=checkbox] {
                 accent-color: var(--color-secondary);
                 cursor: pointer;
