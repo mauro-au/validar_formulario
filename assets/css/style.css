@@ -3,6 +3,7 @@
 :root {
     --color-primary: #0f1b1bea;
     --color-secondary: #1ED860;
+    --color-ternary: #338650;
     --color-text: #6e848d;
     --color-input: #1B272C;
     --color-white: #ffffff;
@@ -14,6 +15,10 @@ body {
     /* background: url('../img/background.jpg') no-repeat top; */
     background-size: cover;
     background-attachment: fixed;
+}
+
+h2 {
+    font-size: 30px;
 }
 
 .content {
@@ -145,7 +150,7 @@ form {
 }
 
 .content_right-message {
-    h2 {
+    h1 {
         margin-bottom: 35px;
         font-size: 40px;
     }
@@ -169,6 +174,8 @@ form {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,7 +190,6 @@ form {
     border: none;
     border-radius: 25px;
     width: 45%;
-    height: 400px;
     display: flex;
     padding: 0;
 
@@ -195,8 +201,9 @@ form {
     }
 
     .content_right {
-        padding: 25px;
+        padding: 35px 35px 40px;
         width: 55%;
+        color: var(--color-primary);
 
         .modalActions {
             width: 100%;
@@ -205,6 +212,73 @@ form {
 
             .closeModal {
                 cursor: pointer;
+            }
+        }
+
+        time {
+            color: #838383;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .subtitle {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .modalContent {
+            margin: 25px 0;
+            display: flex;
+            /* background-color: #eeeeee; */
+            /* border: 2px solid #eeeeee; */
+            /* border: 3px solid #1ed85f2a; */
+            padding: 15px 25px;
+            border-radius: 25px;
+            box-shadow: 0px 5px 25px -3px rgba(0,0,0,0.1);
+
+            img {
+                border-radius: 50%;
+                border: 3px solid #1ed85f;
+                padding: 5px;
+                margin-right: 0px;
+            }
+
+            .info {
+                display: flex;
+                justify-content: space-between;
+                width: 75%;
+                align-items: center;
+                margin-left: 15px;
+
+                .info__user {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    small {
+                        color: #838383;
+                        font-size: 14px;
+                    }
+                }
+
+                .info_icon i {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .dashboard{
+            font-weight: bold;
+            margin-top: 40px;
+            text-align: right;
+
+            a {
+                color: var(--color-ternary);
+                text-decoration: none;
+
             }
         }
     }

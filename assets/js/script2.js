@@ -26,17 +26,24 @@ const clearInputs = () => {
 }
 
 const getValue = () => {
-  let welcome = document.createElement("div");
-  welcome.innerHTML = `
-    <p>${name.value}</p>
-    <p>${email.value}</p>
-    <p>${phone.value}</p>
-    <p>${userName.value}</p>
-    <p>${password.value}</p>
-    <p>${checkbox.checked ? "Acepta los términos" : ""}</p>
+  const template = document.createElement('template');
+  template.innerHTML = `
+    <figure class="avatar_modal">
+      <img src="https://i.pravatar.cc/70" alt="">
+    </figure>
+    <div class="info">
+      <div class="info__user">
+        <h3 class="name">${name.value}</h3>
+        <small>${email.value}</small>
+      </div>
+      <div class="info_icon">
+        <i class="fa-solid fa-mobile-button" style="color: rgb(148, 148, 148);"></i>
+        <i class="fa-solid fa-user" style="color: rgb(148, 148, 148);"></i>
+      </div>
+    </div>
   `;
 
-  modalContent.appendChild(welcome);
+  modalContent.appendChild(template.content.cloneNode(true));
   modal.showModal();
 };
 
@@ -107,7 +114,8 @@ form.addEventListener("submit", (e) => {
   ) {
     getValue();
   }
-  fechaActual.innerHTML = new Date().toLocaleString();
+  const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+  fechaActual.innerText = new Date().toLocaleDateString('es-ES', opciones);
 });
 
 closeBtn.addEventListener('click', () => {
