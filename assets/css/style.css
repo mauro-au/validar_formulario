@@ -223,6 +223,9 @@ form {
             margin-bottom: 20px;
             margin-top: 20px;
         }
+        h3 {
+            line-height: 25px;
+        }
 
         .subtitle {
             margin-top: 20px;
@@ -264,8 +267,12 @@ form {
                     }
                 }
 
-                .info_icon i {
-                    margin-left: 10px;
+                .info_icon{
+                    display: flex;
+
+                    i {
+                        margin-left: 10px;
+                    }
                 }
             }
         }
