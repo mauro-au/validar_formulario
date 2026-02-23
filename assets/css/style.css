@@ -195,7 +195,7 @@ form {
 
     .content_left {
         width: 45%;
-        background: url('../img/modal.jpg') no-repeat center;
+        background: url('../img/background-modal.jpg') no-repeat center;
         background-size: cover;
         border-radius: 25px 0 0 25px;
     }
