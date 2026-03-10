@@ -7,6 +7,7 @@
     --color-text: #6e848d;
     --color-input: #1B272C;
     --color-white: #ffffff;
+    --color-grey: #838383;
 }
 
 body {
@@ -48,11 +49,17 @@ h2 {
     margin-top: 30px;
     margin-bottom: 30px;
 
-    img {
-        border-radius: 50%;
+    .circle {
         margin: 0 auto;
         border: 3px solid #1ed85f3d;
+        border-radius: 50%;
         padding: 10px;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 110px;
+        filter: blur(2px);
     }
 }
 
@@ -212,11 +219,13 @@ form {
 
             .closeModal {
                 cursor: pointer;
+                color: var(--color-grey);
+                font-size: 25px;
             }
         }
 
         time {
-            color: #838383;
+            color: var(--color-grey);
         }
 
         h2 {
@@ -235,9 +244,7 @@ form {
         .modalContent {
             margin: 25px 0;
             display: flex;
-            /* background-color: #eeeeee; */
-            /* border: 2px solid #eeeeee; */
-            /* border: 3px solid #1ed85f2a; */
+            align-items: center;
             padding: 15px 25px;
             border-radius: 25px;
             box-shadow: 0px 5px 25px -3px rgba(0,0,0,0.1);
@@ -262,7 +269,7 @@ form {
                     justify-content: center;
                     
                     small {
-                        color: #838383;
+                        color: var(--color-grey);
                         font-size: 14px;
                     }
                 }
@@ -272,6 +279,8 @@ form {
 
                     i {
                         margin-left: 10px;
+                        font-size: 20PX;
+                        cursor: pointer;
                     }
                 }
             }
