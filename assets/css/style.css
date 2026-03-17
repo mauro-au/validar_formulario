@@ -22,19 +22,19 @@ h2 {
     font-size: 30px;
 }
 
-.content {
+.register-page {
     margin: 40px;
     display: flex;
     justify-content: center;
     border-radius: 25px;
 
-    .content_left {
+    .register-page__form {
         background: var(--color-primary);
         width: 540px;
         border-radius: 20px;
     }
 
-    .content_right {
+    .register-page__info {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -45,20 +45,14 @@ h2 {
 }
 
 .avatar {
-    display: flex;
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    .circle {
-        margin: 0 auto;
-        border: 3px solid #1ed85f3d;
-        border-radius: 50%;
-        padding: 10px;
-    }
+    margin: 30px auto;
+    border: 3px solid #1ed85f3d;
+    border-radius: 50%;
+    padding: 10px;
+    width: 130px;
 
     img {
         border-radius: 50%;
-        width: 110px;
         filter: blur(2px);
     }
 }
@@ -109,18 +103,22 @@ form {
         }
 
 
-        .checbox {
+        .form-checkbox {
             margin-top: 10px;
             margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
 
             input[type=checkbox] {
                 accent-color: var(--color-secondary);
                 cursor: pointer;
+                width: auto;
+                margin: 0;
             }
 
             span {
                 color: var(--color-text);
-                margin-left: 5px;
                 font-size: 13px;
 
                 a {
@@ -142,7 +140,7 @@ form {
         }
     }
 
-    .login {
+    .form-footer {
         text-align: center;
         color: var(--color-text);
         margin-bottom: 30px;
@@ -156,10 +154,14 @@ form {
     }
 }
 
-.content_right-message {
+.promo-message {
     h1 {
         margin-bottom: 35px;
         font-size: 40px;
+    }
+
+    p strong, em {
+        color: var(--color-secondary);
     }
 
     .social {
@@ -174,53 +176,48 @@ form {
     }
 }
 
-.container_modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    box-sizing: content-box;
-    border: none;
-    margin: 0;
-}
-
-.modal_content {
-    background: #fff;
+dialog {
     border: none;
     border-radius: 25px;
     width: 45%;
+    padding: 0;
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    }
+}
+
+
+.modal__panel {
     display: flex;
     padding: 0;
 
-    .content_left {
+    .modal__illustration {
         width: 45%;
         background: url('../img/background-modal.jpg') no-repeat center;
         background-size: cover;
         border-radius: 25px 0 0 25px;
     }
 
-    .content_right {
+    .modal__body {
         padding: 35px 35px 40px;
         width: 55%;
         color: var(--color-primary);
 
-        .modalActions {
+        .modal__header {
             width: 100%;
-            display: flex;
-            justify-content: end;
 
-            .closeModal {
+            .modal__close-btn {
                 cursor: pointer;
                 color: var(--color-grey);
                 font-size: 25px;
+                background: transparent;
+                border: none;
+                width: 100%;
+                display: flex;
+                justify-content: end;
             }
         }
 
@@ -232,16 +229,13 @@ form {
             margin-bottom: 20px;
             margin-top: 20px;
         }
-        h3 {
-            line-height: 25px;
-        }
 
-        .subtitle {
+        .modal__subtitle {
             margin-top: 20px;
             text-align: center;
         }
 
-        .modalContent {
+        .modal__profile {
             margin: 25px 0;
             display: flex;
             align-items: center;
@@ -267,7 +261,7 @@ form {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    
+
                     small {
                         color: var(--color-grey);
                         font-size: 14px;
@@ -286,7 +280,7 @@ form {
             }
         }
 
-        .dashboard{
+        .modal__cta {
             font-weight: bold;
             margin-top: 40px;
             text-align: right;

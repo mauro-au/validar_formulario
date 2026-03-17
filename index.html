@@ -10,99 +10,99 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 </head>
+
 <body>
-  <dialog class="modal">
-    <div class="container_modal">
-      <div class="modal_content">
-        <div class="content_left"></div>
-        <div class="content_right">
-          <div class="modalActions">
-            <span class="closeModal"><i class="ti ti-x"></i></span>
+  <dialog class="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal__panel">
+      <figure class="modal__illustration" aria-hidden="true"></figure>
+      <article class="modal__body">
+        <header class="modal__header">
+          <button class="modal__close-btn" type="button" aria-label="Cerrar ventana emergente" autofocus>
+            <i class="ti ti-x"></i>
+          </button>
+          <div>
+            <time class="modal__date" datetime="2026-03-16"></time>
+            <h2 id="modal-title">🎉¡Bienvenido/a a nuestra comunidad!</h2>
           </div>
-          <time class="fecha_actual"></time>
-          <h2>🎉¡Bienvenido/a a nuestra comunidad!</h2>
-          <p>Tu cuenta ha sido creada exitosamente. Ya puedes comenzar a disfrutar de todos nuestros servicios</p>
-          <div class="modalContent"></div>
-          <h4 class="subtitle">¡Gracias por confiar en nosotros!! 💚</h4>
-          <div class="dashboard">
-            <a href="#">Dashboard
-              <i class="ti ti-arrow-narrow-right-dashed"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+        </header>
+        <p id="modal-desc">Tu cuenta ha sido creada exitosamente. Ya puedes comenzar a disfrutar de todos nuestros servicios.</p>
+        <section class="modal__profile"></section>
+        <h4 class="modal__subtitle">¡Gracias por confiar en nosotros! 💚</h4>
+        <footer class="modal__cta">
+          <a href="#">Dashboard <i class="ti ti-arrow-narrow-right-dashed"></i></a>
+        </footer>
+      </article>
     </div>
   </dialog>
 
-  <main class="content">
-    <section class="content_left">
-      <figure class="avatar">
-        <div class="circle">
-          <img src="https://i.pravatar.cc/110" alt="">
-        </div>
+  <main class="register-page">
+    <section class="register-page__form">
+      <figure class="avatar" aria-label="Avatar de usuario">
+        <img src="https://i.pravatar.cc/110" fetchpriority="high" decoding="sync" alt="Foto de perfil aleatoria">
       </figure>
 
-      <form action="/" method="POST">
+      <form action="/" method="POST" novalidate>
         <fieldset>
           <label>
             Nombre completo
-            <input type="text" id="name" name="name" placeholder="Juan Jimenez" maxlength="100" title="Ingrese tu nombre completo" required autofocus />
+            <input type="text" id="name" name="name" placeholder="Juan Jimenez" maxlength="100"
+              title="Ingrese tu nombre completo" required autofocus />
           </label>
 
           <label>
             Email
-            <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" maxlength="100" title="Ingrese tu correo electrónico" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required />
+            <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" maxlength="100"
+              title="Ingrese tu correo electrónico" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+              required />
           </label>
 
-          <label>Teléfono
-            <input type="tel" id="phone" name="tel" placeholder="+56 9 911111111" maxlength="14" pattern="^\+56 9 \d{8}$" oninput="this.value = this.value.replace(/[^+0-9 ]/g, '');" title="Ingrese tu numero telefónico" required />
+          <label>
+            Teléfono
+            <input type="tel" id="phone" name="tel" placeholder="+56 9 911111111" maxlength="14"
+              pattern="^\+56 9 \d{8}$" oninput="this.value = this.value.replace(/[^+0-9 ]/g, '');"
+              title="Ingrese tu número telefónico" required />
           </label>
 
           <label>
             Nombre de usuario
-            <input type="text" id="userName" name="userName" placeholder="juancho" maxlength="20" title="Ingrese su nombre de usuario" required />
+            <input type="text" id="userName" name="userName" placeholder="juancho" maxlength="20"
+              title="Ingrese su nombre de usuario" required />
           </label>
 
           <label>
             Contraseña
-            <input type="password" id="password" name="password" placeholder="*********" title="Ingrese una contraseña segura" minlength="8" maxlength="20" required />
+            <input type="password" id="password" name="password" placeholder="*********"
+              title="Ingrese una contraseña segura" minlength="8" maxlength="20" required />
           </label>
 
-          <div class="checbox">
-            <input type="checkbox" id="checkbox" required>
+          <label class="form-checkbox">
+            <input type="checkbox" id="terms" name="terms" required>
             <span>Acepto los <a href="#">Términos & Condiciones</a></span>
-          </div>
-          <button class="register" type="submit">Registrar</button>
+          </label>
+
+          <button class="btn btn--primary" type="submit">Registrar</button>
         </fieldset>
-        <p class="login">¿Ya tienes una cuenta? <a href="#">Ingresa</a></p>
+
+        <p class="form-footer">¿Ya tienes una cuenta? <a href="#">Ingresa</a></p>
       </form>
     </section>
-    <section class="content_right">
-      <figure>
-        <img src="assets/img/logo-aurora.svg" alt="">
-      </figure>
 
-      <div class="content_right-message">
+    <aside class="register-page__info">
+      <img src="assets/img/logo-aurora.svg" width="400" alt="Logo del sitio">
+
+      <section class="promo-message">
         <h1>¡Crea tu cuenta ahora!</h1>
 
-        <p>Al crear una cuenta, descubre rutas turísticas hacia destinos naturales y paisajes impresionantes, recibe recomendaciones personalizadas, gestiona reservas de forma más rápida y accede a ofertas exclusivas para vivir experiencias únicas al aire libre.</p>
+        <p>Al crear una cuenta, <strong>descubre rutas turísticas</strong> hacia destinos naturales y <em>paisajes impresionantes</em>, recibe recomendaciones personalizadas, gestiona reservas de forma más rápida y <strong>accede a ofertas exclusivas</strong> para vivir experiencias únicas al aire libre.</p>
 
-        <div class="social">
-          <a href="#">
-            <img src="assets/img/social-white/facebook.svg" alt="">
-          </a>
-          <a href="#">
-            <img src="assets/img/social-white/instagram.svg" alt="">
-          </a>
-          <a href="#">
-            <img src="assets/img/social-white/youtube(1).svg" alt="">
-          </a>
-          <a href="#">
-            <img src="assets/img/social-white/x.svg" alt="">
-          </a>
+        <div class="social" aria-label="Redes sociales">
+          <a href="#" aria-label="Facebook"><img src="assets/img/social-white/facebook.svg" alt="Logo Facebook"></a>
+          <a href="#" aria-label="Instagram"><img src="assets/img/social-white/instagram.svg" alt="Logo Instagram"></a>
+          <a href="#" aria-label="YouTube"><img src="assets/img/social-white/youtube(1).svg" alt="Logo YouTube"></a>
+          <a href="#" aria-label="X"><img src="assets/img/social-white/x.svg" alt="Logo X"></a>
         </div>
-      </div>
-    </section>
+      </section>
+    </aside>
   </main>
 
   <script type="text/javascript" src="assets/js/script.js"></script>

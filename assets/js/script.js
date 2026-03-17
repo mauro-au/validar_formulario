@@ -4,11 +4,11 @@ const email = document.querySelector("#email");
 const phone = document.querySelector("#phone");
 const userName = document.querySelector("#userName");
 const password = document.querySelector("#password");
-const checkbox = document.querySelector("#checkbox");
+const checkbox = document.querySelector("#terms");
 const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".closeModal");
-const modalContent = document.querySelector(".modalContent");
-const fechaActual = document.querySelector(".fecha_actual");
+const closeBtn = document.querySelector(".modal__close-btn");
+const modalContent = document.querySelector(".modal__profile");
+const fechaActual = document.querySelector(".modal__date");
 
 // Campos a validar en orden
 const FIELDS = [nameInput, email, phone, userName, password];
