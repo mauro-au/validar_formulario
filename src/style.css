@@ -1,4 +1,4 @@
-@import url('reset.css');
+@import url('css/reset.css');
 
 :root {
     --color-primary: #0f1b1bea;
@@ -12,7 +12,7 @@
 
 body {
     font-family: sans-serif;
-    background: url('../img/background2.jpg') no-repeat bottom;
+    background: url('assets/img/background2.jpg') no-repeat bottom;
     /* background: url('../img/background.jpg') no-repeat top; */
     background-size: cover;
     background-attachment: fixed;
@@ -196,7 +196,7 @@ dialog {
 
     .modal__illustration {
         width: 45%;
-        background: url('../img/background-modal.jpg') no-repeat center;
+        background: url('assets/img/background-modal.jpg') no-repeat center;
         background-size: cover;
         border-radius: 25px 0 0 25px;
     }
