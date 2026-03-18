@@ -6,13 +6,14 @@
     --color-ternary: #338650;
     --color-text: #6e848d;
     --color-input: #1B272C;
-    --color-white: #ffffff;
+    --color-white: #fff;
     --color-grey: #838383;
 }
 
 body {
     font-family: sans-serif;
     background: url('assets/img/background2.jpg') no-repeat bottom;
+
     /* background: url('../img/background.jpg') no-repeat top; */
     background-size: cover;
     background-attachment: fixed;
@@ -59,6 +60,11 @@ h2 {
 
 form {
     padding: 0 40px;
+
+    a {
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
 
     fieldset {
         border: none;
@@ -110,7 +116,7 @@ form {
             align-items: center;
             gap: 10px;
 
-            input[type=checkbox] {
+            input[type="checkbox"] {
                 accent-color: var(--color-secondary);
                 cursor: pointer;
                 width: auto;
@@ -120,11 +126,6 @@ form {
             span {
                 color: var(--color-text);
                 font-size: 13px;
-
-                a {
-                    color: var(--color-secondary);
-                    text-decoration: none;
-                }
             }
         }
 
@@ -146,11 +147,6 @@ form {
         margin-bottom: 30px;
         margin-top: 10px;
         font-size: 13px;
-
-        a {
-            color: var(--color-secondary);
-            text-decoration: none;
-        }
     }
 }
 
@@ -183,15 +179,14 @@ dialog {
     padding: 0;
 
     &::backdrop {
-        background-color: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(3px);
-        -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+        background-color: rgb(0 0 0 / 60%);
+        backdrop-filter: blur(3px); /* Soporte para Safari */
     }
 }
 
 
 .modal__panel {
-    display: flex;
+    display: flex ;
     padding: 0;
 
     .modal__illustration {
@@ -241,13 +236,13 @@ dialog {
             align-items: center;
             padding: 15px 25px;
             border-radius: 25px;
-            box-shadow: 0px 5px 25px -3px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 25px -3px rgb(0 0 0 / 10%);
 
             img {
                 border-radius: 50%;
                 border: 3px solid #1ed85f;
                 padding: 5px;
-                margin-right: 0px;
+                margin-right: 0;
             }
 
             .info {

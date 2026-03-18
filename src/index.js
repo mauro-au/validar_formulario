@@ -97,8 +97,7 @@ const clearError = (input) => {
 
 // Validador central por campo. Devuelve { valid, message }
 const validateInput = (input) => {
-  if (input.value.trim() === "")
-    return { valid: false, message: MESSAGES.empty };
+  if (input.value.trim() === "") return { valid: false, message: MESSAGES.empty };
 
   const validator = FIELD_VALIDATORS[input.id];
   if (validator && !validator(input)) {

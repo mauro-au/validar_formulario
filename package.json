@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "servor src/ index.html 1234 --reload --browse"
+    "dev": "servor src/ index.html 1234 --reload --browse",
+    "lint": "oxlint src/",
+    "format": "oxfmt src/"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
   "devDependencies": {
     "oxfmt": "^0.41.0",
     "oxlint": "^1.56.0",
-    "servor": "^4.0.2"
+    "servor": "^4.0.2",
+    "stylelint": "^17.4.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }
