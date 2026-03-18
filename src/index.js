@@ -1,14 +1,14 @@
-const form = document.querySelector("form");
-const nameInput = document.querySelector("#name");
-const email = document.querySelector("#email");
-const phone = document.querySelector("#phone");
-const userName = document.querySelector("#userName");
-const password = document.querySelector("#password");
-const checkbox = document.querySelector("#terms");
-const modal = document.querySelector(".modal");
-const closeBtn = document.querySelector(".modal__close-btn");
-const modalContent = document.querySelector(".modal__profile");
-const fechaActual = document.querySelector(".modal__date");
+const form = document.querySelector('form');
+const nameInput = document.querySelector('#name');
+const email = document.querySelector('#email');
+const phone = document.querySelector('#phone');
+const userName = document.querySelector('#userName');
+const password = document.querySelector('#password');
+const checkbox = document.querySelector('#terms');
+const modal = document.querySelector('.modal');
+const closeBtn = document.querySelector('.modal__close-btn');
+const modalContent = document.querySelector('.modal__profile');
+const fechaActual = document.querySelector('.modal__date');
 
 // Campos a validar en orden
 const FIELDS = [nameInput, email, phone, userName, password];
@@ -20,12 +20,12 @@ const clearModal = () => {
 };
 
 const clearInputs = () => {
-  FIELDS.forEach((f) => (f.value = ""));
+  FIELDS.forEach((f) => (f.value = ''));
   checkbox.checked = false;
 };
 
 const getValue = () => {
-  const template = document.createElement("template");
+  const template = document.createElement('template');
   template.innerHTML = `
     <figure class="avatar_modal">
       <img src="https://i.pravatar.cc/70" alt="">
@@ -35,7 +35,7 @@ const getValue = () => {
         <h3 class="name">${nameInput.value}</h3>
         <small>${email.value}</small>
       </div>
-      <div class="info_icon">
+      <div class="info__icon">
         <i class="ti ti-user" style="color: rgb(148, 148, 148);"></i>
         <i class="ti ti-device-mobile" style="color: rgb(148, 148, 148);"></i>
       </div>
@@ -47,7 +47,7 @@ const getValue = () => {
 };
 
 const createError = (parent, message) => {
-  const newSmall = document.createElement("small");
+  const newSmall = document.createElement('small');
   newSmall.textContent = message;
   parent.appendChild(newSmall);
 };
@@ -64,10 +64,10 @@ const validatePhone = (phone) => {
 
 // Mensajes y validadores reutilizables
 const MESSAGES = {
-  empty: "El campo no puede estar vacío",
-  email: "El formato de correo es incorrecto",
-  phone: "El formato de teléfono es incorrecto",
-  password: "El password debe tener 8 o mas caracteres",
+  empty: 'El campo no puede estar vacío',
+  email: 'El formato de correo es incorrecto',
+  phone: 'El formato de teléfono es incorrecto',
+  password: 'El password debe tener 8 o mas caracteres',
 };
 
 const FIELD_VALIDATORS = {
@@ -79,8 +79,8 @@ const FIELD_VALIDATORS = {
 // Helpers para mostrar/ocultar errores
 const showError = (input, message) => {
   const parent = input.parentElement;
-  const existingError = parent.querySelector("small");
-  input.classList.add("input-error");
+  const existingError = parent.querySelector('small');
+  input.classList.add('input-error');
   if (!existingError) {
     createError(parent, message);
   } else {
@@ -90,14 +90,14 @@ const showError = (input, message) => {
 
 const clearError = (input) => {
   const parent = input.parentElement;
-  const existingError = parent.querySelector("small");
-  input.classList.remove("input-error");
+  const existingError = parent.querySelector('small');
+  input.classList.remove('input-error');
   existingError?.remove();
 };
 
 // Validador central por campo. Devuelve { valid, message }
 const validateInput = (input) => {
-  if (input.value.trim() === "") return { valid: false, message: MESSAGES.empty };
+  if (input.value.trim() === '') return { valid: false, message: MESSAGES.empty };
 
   const validator = FIELD_VALIDATORS[input.id];
   if (validator && !validator(input)) {
@@ -117,9 +117,9 @@ const handleInput = (e) => {
   else clearError(input);
 };
 
-form.addEventListener("input", handleInput);
+form.addEventListener('input', handleInput);
 
-form.addEventListener("submit", (e) => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   let allValid = true;
   FIELDS.forEach((field) => {
@@ -136,11 +136,11 @@ form.addEventListener("submit", (e) => {
     getValue();
   }
 
-  const opciones = { year: "numeric", month: "long", day: "numeric" };
-  fechaActual.innerText = new Date().toLocaleDateString("es-ES", opciones);
+  const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+  fechaActual.innerText = new Date().toLocaleDateString('es-ES', opciones);
 });
 
-closeBtn.addEventListener("click", () => {
+closeBtn.addEventListener('click', () => {
   modal.close();
   clearInputs();
   clearModal();
