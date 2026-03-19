@@ -1,4 +1,5 @@
 @import url("css/reset.css");
+@import url("css/fonts.css");
 
 :root {
   --color-primary: #0f1b1bea;
@@ -8,15 +9,22 @@
   --color-input: #1b272c;
   --color-white: #fff;
   --color-grey: #838383;
+  --secure-sources: sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
 }
 
 body {
-  font-family: sans-serif;
-  background: url("assets/img/background2.jpg") no-repeat bottom;
-
-  /* background: url('../img/background.jpg') no-repeat top; */
+  font-family: RobotoLt, var(--secure-sources);
+  background: url("assets/img/background-site.jpg") no-repeat bottom;
   background-size: cover;
   background-attachment: fixed;
+}
+
+h1, h2{
+  font-family: CreatoDisplayBl, var(--secure-sources);
+}
+
+h1 {
+  font-size: 65px;
 }
 
 h2 {
@@ -88,7 +96,7 @@ form {
       }
 
       input::placeholder {
-        opacity: 0.4;
+        opacity: 0.6;
       }
 
       input:focus {
@@ -129,6 +137,8 @@ form {
     }
 
     button {
+      font-family: RobotoNormal, var(--secure-sources);
+      font-weight: bold;
       border: none;
       border-radius: 18px;
       padding: 15px;
@@ -136,7 +146,6 @@ form {
       background: var(--color-secondary);
       color: var(--color-input);
       cursor: pointer;
-      font-weight: bold;
     }
   }
 
@@ -150,14 +159,17 @@ form {
 }
 
 .promo-message {
+  font-size: 18px;
+
   h1 {
+    line-height: 1.1;
     margin-bottom: 35px;
-    font-size: 40px;
   }
 
-  p strong,
+  strong,
   em {
     color: var(--color-secondary);
+    font-weight: bold;
   }
 
   .social {
@@ -215,8 +227,13 @@ dialog {
       }
     }
 
+    #modal-desc {
+      font-weight: bold;
+    }
+
     time {
       color: var(--color-grey);
+      font-weight: bold;
     }
 
     h2 {
