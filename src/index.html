@@ -15,29 +15,6 @@
 </head>
 
 <body>
-  <dialog class="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
-    <div class="modal__panel">
-      <figure class="modal__illustration" aria-hidden="true"></figure>
-      <article class="modal__body">
-        <header class="modal__header">
-          <button class="modal__close-btn" type="button" aria-label="Cerrar ventana emergente" autofocus>
-            <i class="ti ti-x"></i>
-          </button>
-          <div>
-            <time class="modal__date" datetime="2026-03-16"></time>
-            <h2 id="modal-title">🎉¡Ya eres parte de nuestra comunidad!🎉</h2>
-          </div>
-        </header>
-        <p id="modal-desc">Tu cuenta ha sido creada exitosamente. Puedes comenzar a disfrutar de todos nuestros servicios.</p>
-        <section class="modal__profile"></section>
-        <!-- <h4 class="modal__subtitle">¡Gracias por confiar en nosotros! 💚</h4> -->
-        <footer class="modal__cta">
-          <a href="#">Dashboard <i class="ti ti-arrow-narrow-right-dashed"></i></a>
-        </footer>
-      </article>
-    </div>
-  </dialog>
-
   <main class="register-page">
     <section class="register-page__form">
       <figure class="avatar" aria-label="Avatar de usuario">
@@ -91,7 +68,7 @@
     </section>
 
     <aside class="register-page__info">
-      <img src="assets/img/logo-aurora.svg" width="400" alt="Logo del sitio">
+      <img src="assets/img/logo-aurora.svg" width="350" alt="Logo del sitio">
 
       <section class="promo-message">
         <h1>¡Crea tu cuenta ahora!</h1>
@@ -107,6 +84,29 @@
       </section>
     </aside>
   </main>
+
+  <dialog class="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <div class="modal__panel">
+      <figure class="modal__illustration" aria-hidden="true"></figure>
+      <article class="modal__body">
+        <header class="modal__header">
+          <button class="modal__close-btn" type="button" aria-label="Cerrar ventana emergente" autofocus>
+            <i class="ti ti-x"></i>
+          </button>
+          <div>
+            <time class="modal__date" datetime="2026-03-16"></time>
+            <h2 id="modal-title">🎉¡Ya eres parte de nuestra comunidad!🎉</h2>
+          </div>
+        </header>
+        <p id="modal-desc">Tu cuenta ha sido creada exitosamente. Puedes comenzar a disfrutar de todos nuestros servicios.</p>
+        <section class="modal__profile"></section>
+        <!-- <h4 class="modal__subtitle">¡Gracias por confiar en nosotros! 💚</h4> -->
+        <footer class="modal__cta">
+          <a href="#">Dashboard <i class="ti ti-arrow-narrow-right-dashed"></i></a>
+        </footer>
+      </article>
+    </div>
+  </dialog>
 
   <script type="text/javascript" src="index.js"></script>
 </body>

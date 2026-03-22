@@ -9,7 +9,12 @@
   --color-input: #1b272c;
   --color-white: #fff;
   --color-grey: #838383;
+  --color-error: #f00;
   --secure-sources: sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
+  --bp-sm: 480px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
 }
 
 body {
@@ -19,7 +24,7 @@ body {
   background-attachment: fixed;
 }
 
-h1, h2{
+:is(h1, h2){
   font-family: CreatoDisplayBl, var(--secure-sources);
 }
 
@@ -32,24 +37,49 @@ h2 {
 }
 
 .register-page {
-  margin: 40px;
-  display: flex;
+  margin: 40px auto;
   justify-content: center;
-  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 540px 700px;
+  gap: 30px;
+  width: 60%;
+
+  @media (width <= 1280px) {
+    grid-template-columns: 45% 55%;
+    width: 90%;
+  }
+
+  @media (width <= 1024px) {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+
+  @media (width <= 768px) {
+    width: 90%;
+  }
 
   .register-page__form {
     background: var(--color-primary);
-    width: 540px;
     border-radius: 20px;
+
+    @media (width <= 1024px) {
+      order: 2;
+    }
   }
 
   .register-page__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 40px 70px;
-    width: 700px;
+    padding: 40px;
     color: var(--color-white);
+
+    @media (width <= 1024px) {
+      order: 1;
+      justify-content: initial;
+      align-items: center;
+      padding: 10px;
+    }
   }
 }
 
@@ -96,7 +126,7 @@ form {
       }
 
       input::placeholder {
-        opacity: 0.6;
+        opacity: 0.7;
       }
 
       input:focus {
@@ -104,11 +134,11 @@ form {
       }
 
       .input-error {
-        border: 2px solid red !important;
+        border: 2px solid var(--color-error);
       }
 
       small {
-        color: red;
+        color: var(--color-error);
         position: absolute;
         display: block;
         bottom: -6px;
@@ -120,7 +150,6 @@ form {
       margin-top: 10px;
       margin-bottom: 20px;
       display: flex;
-      align-items: center;
       gap: 10px;
 
       input[type="checkbox"] {
@@ -164,10 +193,21 @@ form {
   h1 {
     line-height: 1.1;
     margin-bottom: 35px;
+
+    @media (width <= 1024px) {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 50px;
+    }
   }
 
-  strong,
-  em {
+  p {
+    @media (width <= 1024px) {
+      display: none;
+    }
+  }
+
+  strong {
     color: var(--color-secondary);
     font-weight: bold;
   }
@@ -176,6 +216,10 @@ form {
     display: flex;
     justify-content: center;
     margin-top: 40px;
+
+    @media (width <= 1024px) {
+      display: none;
+    }
 
     img {
       width: 25px;
