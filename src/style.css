@@ -26,9 +26,8 @@ html {
 
 body {
   font-family: RobotoLt, var(--secure-sources);
-  background: url("assets/img/background-site.jpg") no-repeat bottom;
+  background: url("assets/img/background-site.jpg") no-repeat bottom fixed;
   background-size: cover;
-  background-attachment: fixed;
   font-size: var(--fs-sm);
 }
 
@@ -45,7 +44,8 @@ h2 {
 }
 
 .register-page {
-  margin: 40px auto;
+  margin: 0 auto;
+  padding: 40px 0;
   justify-content: center;
   display: grid;
   grid-template-columns: 540px 700px;
