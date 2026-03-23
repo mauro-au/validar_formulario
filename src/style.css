@@ -10,8 +10,7 @@
   --color-white: #fff;
   --color-grey: #838383;
   --color-error: #f00;
-  --secure-sources:
-    sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
+  --secure-sources: sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
   --fs-xs: 0.875rem;  /* 14px */
   --fs-sm: 1rem;      /* 16px */
   --fs-md: 1.125rem;  /* 18px */
@@ -71,6 +70,13 @@ h2 {
 
     @media (width <= 1024px) {
       order: 2;
+
+      h1 {
+        font-size: var(--fs-xl);
+        color: #fff;
+        text-align: center;
+        margin: 20px;
+      }
     }
   }
 
@@ -88,7 +94,7 @@ h2 {
       padding: 10px;
 
       img {
-        width: 240px;
+        width: 290px;
       }
     }
   }
@@ -100,6 +106,14 @@ h2 {
   border-radius: 50%;
   padding: 10px;
   width: 130px;
+
+  @media (width <= 1024px) {
+    width: 115px;
+  }
+
+  @media (width <= 768px) {
+    width: 100px;
+  }
 
   img {
     border-radius: 50%;
@@ -214,6 +228,10 @@ form {
   h1 {
     line-height: 1.1;
     margin-bottom: 35px;
+
+    @media (width <= 1024px) {
+      display: none;
+    }
 
     @media (width <= 1024px) {
       text-align: center;
