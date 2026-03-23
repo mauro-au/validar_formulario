@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "servor src/ index.html 1234 --reload --browse",
+    "dev": "servor . index.html 1234 --reload --browse",
     "lint:js": "oxlint src/",
     "lint:css": "stylelint src/",
     "format": "oxfmt src/"
