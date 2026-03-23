@@ -10,11 +10,19 @@
   --color-white: #fff;
   --color-grey: #838383;
   --color-error: #f00;
-  --secure-sources: sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
-  --bp-sm: 480px;
-  --bp-md: 768px;
-  --bp-lg: 1024px;
-  --bp-xl: 1280px;
+  --secure-sources:
+    sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
+  --fs-xs: 0.875rem;  /* 14px */
+  --fs-sm: 1rem;      /* 16px */
+  --fs-md: 1.125rem;  /* 18px */
+  --fs-lg: 1.5rem;    /* 24px */
+  --fs-xl: 2rem;      /* 32px */
+  --fs-xxl: 3rem;     /* 48px */
+  --fs-hero: 4rem;    /* 64px */
+}
+
+html {
+  font-size: 100%;
 }
 
 body {
@@ -22,18 +30,19 @@ body {
   background: url("assets/img/background-site.jpg") no-repeat bottom;
   background-size: cover;
   background-attachment: fixed;
+  font-size: var(--fs-sm);
 }
 
-:is(h1, h2){
+:is(h1, h2) {
   font-family: CreatoDisplayBl, var(--secure-sources);
 }
 
 h1 {
-  font-size: 65px;
+  font-size: var(--fs-hero);
 }
 
 h2 {
-  font-size: 30px;
+  font-size: var(--fs-xl);
 }
 
 .register-page {
@@ -42,11 +51,9 @@ h2 {
   display: grid;
   grid-template-columns: 540px 700px;
   gap: 30px;
-  width: 60%;
 
   @media (width <= 1280px) {
-    grid-template-columns: 45% 55%;
-    width: 90%;
+    grid-template-columns: 40% 50%;
   }
 
   @media (width <= 1024px) {
@@ -55,7 +62,7 @@ h2 {
   }
 
   @media (width <= 768px) {
-    width: 90%;
+    width: 85%;
   }
 
   .register-page__form {
@@ -79,6 +86,10 @@ h2 {
       justify-content: initial;
       align-items: center;
       padding: 10px;
+
+      img {
+        width: 240px;
+      }
     }
   }
 }
@@ -99,6 +110,10 @@ h2 {
 form {
   padding: 0 40px;
 
+  @media (width <= 480px) {
+    padding: 0 25px;
+  }
+
   a {
     color: var(--color-secondary);
     text-decoration: none;
@@ -108,6 +123,7 @@ form {
     border: none;
     display: flex;
     flex-direction: column;
+    padding: 0;
 
     label {
       color: var(--color-text);
@@ -175,20 +191,25 @@ form {
       background: var(--color-secondary);
       color: var(--color-input);
       cursor: pointer;
+      transition: all 200ms ease;
+
+      &:hover {
+        filter: brightness(1.1);
+        box-shadow: 0 5px 25px -3px rgb(0 255 76 / 40%);
+      }
     }
   }
 
   .form-footer {
     text-align: center;
     color: var(--color-text);
-    margin-bottom: 30px;
-    margin-top: 10px;
-    font-size: 13px;
+    margin-block: 0.625rem 1.875rem;
+    font-size: var(--fs-xs);
   }
 }
 
 .promo-message {
-  font-size: 18px;
+  font-size: var(--fs-md);
 
   h1 {
     line-height: 1.1;
@@ -197,7 +218,7 @@ form {
     @media (width <= 1024px) {
       text-align: center;
       margin: 40px 0;
-      font-size: 50px;
+      font-size: var(--fs-xxl);
     }
   }
 
@@ -262,7 +283,7 @@ dialog {
       .modal__close-btn {
         cursor: pointer;
         color: var(--color-grey);
-        font-size: 25px;
+        font-size: var(--fs-lg);
         background: transparent;
         border: none;
         width: 100%;
@@ -281,8 +302,7 @@ dialog {
     }
 
     h2 {
-      margin-bottom: 20px;
-      margin-top: 20px;
+      margin-block: 1.25rem;
     }
 
     .modal__subtitle {
@@ -319,7 +339,6 @@ dialog {
 
           small {
             color: var(--color-grey);
-            font-size: 14px;
           }
         }
 
@@ -328,7 +347,7 @@ dialog {
 
           i {
             margin-left: 10px;
-            font-size: 20px;
+            font-size: var(--fs-lg);
             cursor: pointer;
           }
         }
