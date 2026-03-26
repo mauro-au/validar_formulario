@@ -146,12 +146,13 @@ form {
         border-radius: 18px;
         border: 2px solid transparent;
         outline: none;
-        padding: 15px;
+        padding: 15px 15px 15px 45px;
         margin-top: 10px;
         margin-bottom: 20px;
         background-color: var(--color-input);
         color: var(--color-text);
         width: 100%;
+        transition: ease-in .3s;
       }
 
       input::placeholder {
@@ -161,6 +162,15 @@ form {
       input:focus-visible {
         border-color: var(--color-secondary);
         box-shadow: 0 0 4px 2px rgb(20 235 66 / 20%);
+      }
+
+      i {
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        top: 54px;
+        font-size: 18px;
+        opacity: 0.5;
       }
 
       .input-error {

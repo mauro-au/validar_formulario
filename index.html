@@ -27,12 +27,14 @@
         <fieldset>
           <label>
             Nombre completo
+            <i class="ti ti-user"></i>
             <input type="text" id="name" name="name" placeholder="Juan Jimenez" maxlength="100"
               title="Ingrese tu nombre completo" required autofocus />
           </label>
 
           <label>
             Email
+            <i class="ti ti-mail"></i>
             <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" maxlength="100"
               title="Ingrese tu correo electrónico" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
               required />
@@ -40,6 +42,7 @@
 
           <label>
             Teléfono
+            <i class="ti ti-device-mobile"></i>
             <input type="tel" id="phone" name="tel" placeholder="+56 9 911111111" value="+56 9 " maxlength="14"
               pattern="^\+56 9 \d{8}$" oninput="this.value = this.value.replace(/[^+0-9 ]/g, '');"
               title="Ingrese tu número telefónico" required />
@@ -47,12 +50,14 @@
 
           <label>
             Nombre de usuario
+            <i class="ti ti-user-heart"></i>
             <input type="text" id="userName" name="userName" placeholder="juancho" maxlength="20"
               title="Ingrese su nombre de usuario" required />
           </label>
 
           <label>
             Contraseña
+            <i class="ti ti-lock"></i>
             <input type="password" id="password" name="password" placeholder="*********"
               title="Ingrese una contraseña segura" minlength="8" maxlength="20" required />
           </label>
