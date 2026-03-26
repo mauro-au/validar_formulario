@@ -27,17 +27,19 @@ const clearInputs = () => {
 const getValue = () => {
   const template = document.createElement('template');
   template.innerHTML = `
-    <figure class="avatar_modal">
-      <img src="https://i.pravatar.cc/70" alt="">
-    </figure>
-    <div class="info">
-      <div class="info__user">
-        <h3 class="name">${nameInput.value}</h3>
-        <small>${email.value}</small>
-      </div>
-      <div class="info__icon">
-        <i class="ti ti-user" style="color: rgb(148, 148, 148);"></i>
-        <i class="ti ti-device-mobile" style="color: rgb(148, 148, 148);"></i>
+    <div class="modal__card">
+      <figure class="modal__avatar">
+        <img src="https://static.photos/nature/200x200" width="70" alt="Imagen aleatoria de naturaleza para el avatar">
+      </figure>
+      <div class="modal__info">
+        <span class="modal__chip">${userName.value}</span>
+        <h3 class="modal__name">${nameInput.value}</h3>
+        <p>
+          <i class="ti ti-mail-check modal__icon-info"></i>${email.value}
+        </p>
+        <p>
+          <i class="ti ti-device-mobile-check modal__icon-info"></i>${phone.value}
+        </p>
       </div>
     </div>
   `;
