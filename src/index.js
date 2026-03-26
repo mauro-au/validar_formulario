@@ -9,6 +9,8 @@ const modal = document.querySelector('.modal');
 const closeBtn = document.querySelector('.modal__close-btn');
 const modalContent = document.querySelector('.modal__profile');
 const fechaActual = document.querySelector('.modal__date');
+const inputPhone = document.getElementById('phone');
+const PREFIX = '+56 9 ';
 
 // Campos a validar en orden
 const FIELDS = [nameInput, email, phone, userName, password];
@@ -118,6 +120,30 @@ const handleInput = (e) => {
   if (!result.valid) showError(input, result.message);
   else clearError(input);
 };
+
+inputPhone.addEventListener('input', function() {
+  // Si el usuario intenta borrar el prefijo, se vuelve a poner
+  if (!inputPhone.value.startsWith(PREFIX )) {
+      inputPhone.value = PREFIX ;
+  }
+});
+
+inputPhone.addEventListener('keydown', function(e) {
+  // Evita que el cursor retroceda antes del prefijo con la tecla borrar
+  const isDeleting = e.key === 'Backspace' || e.key === 'Delete';
+  const isBeforePrefix = inputPhone.selectionStart <= PREFIX.length;
+
+  if (isDeleting && isBeforePrefix) {
+    e.preventDefault();
+  }
+});
+
+inputPhone.addEventListener('click', function() {
+  // Si hace clic al inicio, mueve el cursor al final del prefijo
+  if (inputPhone.selectionStart < PREFIX.length) {
+      inputPhone.setSelectionRange(PREFIX.length, PREFIX.length);
+  }
+});
 
 form.addEventListener('input', handleInput);
 
