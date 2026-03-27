@@ -5,11 +5,12 @@ const phone = document.querySelector('#phone');
 const userName = document.querySelector('#userName');
 const password = document.querySelector('#password');
 const checkbox = document.querySelector('#terms');
-const modal = document.querySelector('.modal');
+const modal = document.querySelector('dialog');
 const closeBtn = document.querySelector('.modal__close-btn');
 const modalContent = document.querySelector('.modal__profile');
 const fechaActual = document.querySelector('.modal__date');
 const inputPhone = document.getElementById('phone');
+const registrar = document.querySelector('.btn');
 const PREFIX = '+56 9 ';
 
 // Campos a validar en orden
@@ -121,6 +122,13 @@ const handleInput = (e) => {
   else clearError(input);
 };
 
+const loader = () => {
+  const loader = document.createElement('div');
+  loader.classList.add('loader');
+  registrar.textContent = ''
+  registrar.appendChild(loader);
+}
+
 inputPhone.addEventListener('input', function() {
   // Si el usuario intenta borrar el prefijo, se vuelve a poner
   if (!inputPhone.value.startsWith(PREFIX )) {
@@ -161,15 +169,36 @@ form.addEventListener('submit', (e) => {
   });
 
   if (allValid) {
-    getValue();
+    loader()
+
+    setTimeout(() => {
+      getValue();
+      modal.classList.add('is-visible');
+      const loaderRemove = document.querySelector('.loader');
+      loaderRemove.remove()
+      registrar.textContent = 'Registrar'
+    }, 1000)
   }
 
   const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
   fechaActual.innerText = new Date().toLocaleDateString('es-ES', opciones);
 });
 
-closeBtn.addEventListener('click', () => {
-  modal.close();
+const closeModal = () => {
+  modal.classList.remove('is-visible');
+  modal.classList.add("closing");
+  setTimeout(() => {
+    modal.classList.remove("closing");
+    modal.close();
+    clearModal();
+  }, 1500);
   clearInputs();
-  clearModal();
+}
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) {
+    closeModal();
+  }
 });
+
+closeBtn.addEventListener('click', closeModal);
