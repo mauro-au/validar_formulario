@@ -12,6 +12,12 @@ const fechaActual = document.querySelector('.modal__date');
 const inputPhone = document.getElementById('phone');
 const registrar = document.querySelector('.btn');
 const PREFIX = '+56 9 ';
+const canvas = document.getElementById('confetti-canvas');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const myConfetti = confetti.create(canvas, { resize: false });
 
 // Campos a validar en orden
 const FIELDS = [nameInput, email, phone, userName, password];
@@ -129,6 +135,24 @@ const loader = () => {
   registrar.appendChild(loader);
 }
 
+function lanzarConfetti() {
+  // Centro lado izquierdo
+  myConfetti({
+    particleCount: 80,
+    angle: 60,
+    spread: 60,
+    origin: { x: 0, y: 0.5 }
+  });
+
+  // Centro lado derecho
+  myConfetti({
+    particleCount: 80,
+    angle: 120,
+    spread: 60,
+    origin: { x: 1, y: 0.5 }
+  });
+}
+
 inputPhone.addEventListener('input', function() {
   // Si el usuario intenta borrar el prefijo, se vuelve a poner
   if (!inputPhone.value.startsWith(PREFIX )) {
@@ -170,14 +194,13 @@ form.addEventListener('submit', (e) => {
 
   if (allValid) {
     loader()
-
-    setTimeout(() => {
-      getValue();
-      modal.classList.add('is-visible');
-      const loaderRemove = document.querySelector('.loader');
-      loaderRemove.remove()
-      registrar.textContent = 'Registrar'
-    }, 1000)
+    getValue();
+    canvas.showPopover();
+    lanzarConfetti();
+    modal.classList.add('is-visible');
+    const loaderRemove = document.querySelector('.loader');
+    loaderRemove.remove()
+    registrar.textContent = 'Registrar'
   }
 
   const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -190,10 +213,16 @@ const closeModal = () => {
   setTimeout(() => {
     modal.classList.remove("closing");
     modal.close();
+    canvas.hidePopover();
     clearModal();
-  }, 1500);
+  }, 1000);
   clearInputs();
 }
+
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
 
 modal.addEventListener('click', e => {
   if (e.target === modal) {

@@ -9,11 +9,10 @@
   <meta name="color-scheme" content="dark">
   <title>Formulario de registro</title>
 
+  <link rel="stylesheet" href="src/css/reset.css" />
+  <link rel="stylesheet" href="src/css/fonts.css" />
   <link rel="stylesheet" href="src/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
-  <link rel="preload" href="src/assets/fonts/assets/fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="src/assets/fonts/assets/fonts/CreatoDisplay-Black.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="src/assets/fonts/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
@@ -92,6 +91,8 @@
     </aside>
   </main>
 
+  <canvas id="confetti-canvas" popover="manual"></canvas>
+
   <dialog class="modal" aria-labelledby="modal-title" aria-describedby="modal-desc">
     <div class="modal__panel">
       <figure class="modal__illustration" aria-hidden="true"></figure>
@@ -102,7 +103,7 @@
           </button>
           <div>
             <time class="modal__date" datetime="2026-03-16"></time>
-            <h2 id="modal-title">🎉¡Ya eres parte de nuestra comunidad!🎉</h2>
+            <h2 id="modal-title">🎉¡Ya eres parte de nuestra comunidad! 🎊</h2>
           </div>
         </header>
         <section class="modal__profile">
@@ -115,6 +116,7 @@
     </div>
   </dialog>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
   <script type="text/javascript" src="src/index.js"></script>
 </body>
 
