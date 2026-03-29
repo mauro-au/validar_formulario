@@ -13,6 +13,8 @@ const inputPhone = document.getElementById('phone');
 const registrar = document.querySelector('.btn');
 const PREFIX = '+56 9 ';
 const canvas = document.getElementById('confetti-canvas');
+const passwordInput = document.getElementById('password');
+const togglePasswordButton = document.querySelector('.toggle-btn');
 
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -32,6 +34,15 @@ const clearInputs = () => {
   FIELDS.forEach((f) => (f.value = ''));
   checkbox.checked = false;
 };
+
+togglePasswordButton.addEventListener('click', () => {
+  const isHidden = passwordInput.type === 'password';
+  if (passwordInput.value !== '') {
+    passwordInput.type = isHidden ? 'text' : 'password';
+    togglePasswordButton.classList.toggle('visible', isHidden);
+    togglePasswordButton.setAttribute('aria-label', isHidden ? 'Ocultar contraseña' : 'Mostrar contraseña');
+  }
+})
 
 const getValue = () => {
   const template = document.createElement('template');

@@ -138,19 +138,24 @@ form {
 
     label {
       color: var(--color-text);
+    }
+
+    .input-wrapper {
       position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
 
       input {
         border-radius: 18px;
         border: 2px solid transparent;
         outline: none;
-        padding: 15px 15px 15px 45px;
-        margin-top: 10px;
-        margin-bottom: 20px;
+        padding: 15px 45px;
+        margin: 10px 0;
         background-color: var(--color-input);
         color: var(--color-text);
         width: 100%;
-        transition: ease-in .3s;
+        transition: ease-in 0.3s;
       }
 
       input::placeholder {
@@ -162,13 +167,24 @@ form {
         box-shadow: 0 0 4px 2px rgb(20 235 66 / 20%);
       }
 
-      i {
+      span {
         position: absolute;
-        bottom: 0;
-        left: 15px;
-        top: 54px;
         font-size: 18px;
         opacity: 0.5;
+        pointer-events: none;
+        display: flex;
+
+        i {
+          opacity: .5;
+        }
+      }
+
+      .icon-left {
+        left: 15px;
+      }
+
+      .icon-right {
+        right: 15px;
       }
 
       .input-error {
@@ -179,8 +195,7 @@ form {
       small {
         color: var(--color-error);
         position: absolute;
-        display: block;
-        bottom: -6px;
+        bottom: -12px;
         right: 0;
       }
     }
@@ -204,7 +219,7 @@ form {
       }
     }
 
-    button {
+    .btn {
       font-family: RobotoNormal, var(--secure-sources);
       font-weight: bold;
       border: none;
@@ -229,6 +244,57 @@ form {
     margin-block: 0.625rem 1.875rem;
     font-size: var(--fs-xs);
   }
+}
+
+
+.toggle-btn {
+  position: absolute;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+  border-radius: 6px;
+  transition:
+    color 0.2s,
+    background 0.2s;
+  padding: 0;
+}
+
+.toggle-btn:hover {
+  color: var(--text);
+  background: #ffffff0d;
+}
+
+.toggle-btn:active {
+  background: #ffffff16;
+}
+
+:is(.icon-eye, .icon-eye-off) {
+  position: absolute;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+
+.icon-eye-off {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.toggle-btn.visible .icon-eye {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.toggle-btn.visible .icon-eye-off {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .promo-message {
@@ -285,7 +351,7 @@ dialog {
   font-weight: bold;
   opacity: 0;
   filter: blur(7px);
-	transform: translateY(-5%);
+  transform: translateY(-5%);
   transition: all 1s ease-in-out;
 
   &.is-visible {
