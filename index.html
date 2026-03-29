@@ -24,42 +24,48 @@
 
       <form action="/" method="POST" novalidate>
         <fieldset>
-          <label>
-            Nombre completo
-            <i class="ti ti-user"></i>
+          <label for="name">Nombre completo</label>
+          <div class="input-wrapper has-icon-left has-icon-right">
+            <span class="icon-left"><i class="ti ti-user"></i></span>
             <input type="text" id="name" name="name" placeholder="Juan Jimenez" maxlength="100"
-              title="Ingrese tu nombre completo" required autofocus />
-          </label>
+            title="Ingrese tu nombre completo" required autofocus />
+          </div>
 
-          <label>
-            Email
-            <i class="ti ti-mail"></i>
+          <label for="email">Email</label>
+          <div class="input-wrapper has-icon-left has-icon-right">
+            <span class="icon-left"><i class="ti ti-mail"></i></span>
             <input type="email" id="email" name="email" placeholder="ejemplo@ejemplo.com" maxlength="100"
-              title="Ingrese tu correo electrónico" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
-              required />
-          </label>
+            title="Ingrese tu correo electrónico" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}"
+            required />
+          </div>
 
-          <label>
-            Teléfono
-            <i class="ti ti-device-mobile"></i>
+          <label for="phone">Teléfono</label>
+          <div class="input-wrapper has-icon-left has-icon-right">
+            <span class="icon-left"><i class="ti ti-device-mobile"></i></span>
             <input type="tel" id="phone" name="tel" placeholder="+56 9 911111111" value="+56 9 " maxlength="14"
-              pattern="^\+56 9 \d{8}$" oninput="this.value = this.value.replace(/[^+0-9 ]/g, '');"
-              title="Ingrese tu número telefónico" required />
-          </label>
+            pattern="^\+56 9 \d{8}$" oninput="this.value = this.value.replace(/[^+0-9 ]/g, '');"
+            title="Ingrese tu número telefónico" required />
+          </div>
 
-          <label>
-            Nombre de usuario
-            <i class="ti ti-user-heart"></i>
+          <label for="userName">Nombre de usuario</label>
+          <div class="input-wrapper has-icon-left has-icon-right">
+            <span class="icon-left"><i class="ti ti-user-heart"></i></span>
             <input type="text" id="userName" name="userName" placeholder="juancho" maxlength="20"
-              title="Ingrese su nombre de usuario" required />
-          </label>
+            title="Ingrese su nombre de usuario" required />
+          </div>
 
-          <label>
-            Contraseña
-            <i class="ti ti-lock"></i>
+          <label for="password">Contraseña</label>
+          <div class="input-wrapper has-icon-left has-icon-right">
+            <span class="icon-left"><i class="ti ti-lock"></i></span>
             <input type="password" id="password" name="password" placeholder="*********"
-              title="Ingrese una contraseña segura" minlength="8" maxlength="20" required />
-          </label>
+              title="Ingrese una contraseña segura" minlength="8" maxlength="20" autocomplete="current-password" required />
+            <button class="toggle-btn" type="button" aria-label="Mostrar contraseña" data-target="pwd">
+              <!-- ojo cerrado (estado visible) -->
+              <i class="ti ti-eye icon-eye-off"></i>
+              <!-- ojo abierto (estado oculto) -->
+              <i class="ti ti-eye-closed icon-eye"></i>
+            </button>
+          </div>
 
           <label class="form-checkbox">
             <input type="checkbox" id="terms" name="terms" required>
