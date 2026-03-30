@@ -4,7 +4,7 @@ const email = document.querySelector('#email');
 const phone = document.querySelector('#phone');
 const userName = document.querySelector('#userName');
 const password = document.querySelector('#password');
-const checkbox = document.querySelector('#terms');
+const checkbox = document.querySelector('#checkbox');
 const modal = document.querySelector('dialog');
 const closeBtn = document.querySelector('.modal__close-btn');
 const modalContent = document.querySelector('.modal__profile');
@@ -22,7 +22,7 @@ canvas.height = window.innerHeight;
 const myConfetti = confetti.create(canvas, { resize: false });
 
 // Campos a validar en orden
-const FIELDS = [nameInput, email, phone, userName, password];
+const FIELDS = [nameInput, email, phone, userName, password, checkbox];
 
 const clearModal = () => {
   while (modalContent.firstChild) {
@@ -90,12 +90,14 @@ const MESSAGES = {
   email: 'El formato de correo es incorrecto',
   phone: 'El formato de teléfono es incorrecto',
   password: 'El password debe tener 8 o mas caracteres',
+  checkbox: 'Debe aceptar los términos para continuar',
 };
 
 const FIELD_VALIDATORS = {
   email: (input) => validateEmail(input.value),
   phone: (input) => validatePhone(input.value),
   password: (input) => input.value.length >= 8,
+  checkbox: (input) => input.checked === true,
 };
 
 // Helpers para mostrar/ocultar errores
