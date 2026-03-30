@@ -1,14 +1,21 @@
 :root {
+  /* Color tokens */
   --color-primary: #0f1b1bea;
   --color-secondary: #1ed860;
-  --color-ternary: #338650;
+  --color-tertiary: #338650;
   --color-text: #6e848d;
   --color-input: #1b272c;
   --color-white: #fff;
+  --color-black: #000;
   --color-grey: #838383;
   --color-error: #f00;
+
+  /* Font-family tokens */
   --secure-sources:
     sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
+
+  /* Font-size tokens */
+  --fs-xxs: 0.8125rem; /* 13px */
   --fs-xs: 0.875rem; /* 14px */
   --fs-sm: 1rem; /* 16px */
   --fs-md: 1.125rem; /* 18px */
@@ -16,6 +23,15 @@
   --fs-xl: 2rem; /* 32px */
   --fs-xxl: 3rem; /* 48px */
   --fs-hero: 4rem; /* 64px */
+
+  /* Border-radius tokens */
+  --radius-sm: 0.375rem; /* 6px  */
+  --radius-md: 1.125rem; /* 18px */
+  --radius-lg: 1.5625rem; /* 25px */
+
+  /* Transiciones tokens */
+  --transition-fast: 300ms ease-in;
+  --transition-slow: 0.7s ease-in-out;
 }
 
 html {
@@ -100,7 +116,7 @@ h2 {
 
 .avatar {
   margin: 30px auto;
-  border: 3px solid #1ed85f3d;
+  border: 3px solid color-mix(in srgb, var(--color-secondary) 24%, transparent);
   border-radius: 50%;
   padding: 10px;
   width: 130px;
@@ -120,6 +136,7 @@ h2 {
 
 form {
   padding: 0 40px;
+  color: var(--color-text);
 
   @media (width <= 480px) {
     padding: 0 25px;
@@ -136,10 +153,6 @@ form {
     flex-direction: column;
     padding: 0;
 
-    label {
-      color: var(--color-text);
-    }
-
     .input-wrapper {
       position: relative;
       display: flex;
@@ -153,15 +166,15 @@ form {
         padding: 15px 45px;
         margin: 10px 0;
         background-color: var(--color-input);
-        color: var(--color-text);
         width: 100%;
         transition: ease-in 0.3s;
+        font: inherit;
 
         &::placeholder {
-          opacity: 0.7;
+          opacity: 0.5;
         }
 
-        &:focus-visible {
+        &:where(:focus-visible) {
           border-color: var(--color-secondary);
           box-shadow: 0 0 4px 2px rgb(20 235 66 / 20%);
         }
@@ -169,12 +182,16 @@ form {
         &:hover {
           background: #253237;
         }
+
+        &.input-error {
+          border-color: var(--color-error);
+          box-shadow: none;
+        }
       }
 
       span {
         position: absolute;
-        font-size: 18px;
-        opacity: 0.5;
+        font-size: var(--fs-md);
         pointer-events: none;
         display: flex;
 
@@ -191,11 +208,6 @@ form {
         right: 15px;
       }
 
-      .input-error {
-        border: 2px solid var(--color-error) !important;
-        box-shadow: none !important;
-      }
-
       small {
         color: var(--color-error);
         position: absolute;
@@ -207,7 +219,6 @@ form {
     .form-checkbox {
       margin-top: 10px;
       margin-bottom: 20px;
-      display: flex;
       gap: 10px;
 
       input[type="checkbox"] {
@@ -239,8 +250,7 @@ form {
       }
 
       label {
-        color: var(--color-text);
-        font-size: 13px;
+        font-size: var(--fs-xxs);
       }
 
       small {
@@ -249,7 +259,7 @@ form {
       }
     }
 
-    .btn {
+    .registration-btn {
       font-family: RobotoNormal, var(--secure-sources);
       font-weight: bold;
       border: none;
@@ -259,18 +269,17 @@ form {
       background: var(--color-secondary);
       color: var(--color-input);
       cursor: pointer;
-      transition: all 200ms ease;
+      transition: all var(--transition-fast);
 
       &:hover {
         filter: brightness(1.1);
-        box-shadow: 0 5px 25px -3px rgb(0 255 76 / 40%);
+        box-shadow: 0 5px 25px -3px color-mix(in srgb, var(--color-secondary) 40%, transparent);
       }
     }
   }
 
   .form-footer {
     text-align: center;
-    color: var(--color-text);
     margin-block: 0.625rem 1.875rem;
     font-size: var(--fs-xs);
   }
@@ -287,21 +296,14 @@ form {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--muted);
   border-radius: 6px;
   transition:
     color 0.2s,
     background 0.2s;
-  padding: 0;
 }
 
-.toggle-btn:hover {
-  color: var(--text);
-  background: #ffffff0d;
-}
-
-.toggle-btn:active {
-  background: #ffffff16;
+.toggle-btn:is(:hover, :active) {
+  background: var(--color-primary);
 }
 
 :is(.icon-eye, .icon-eye-off) {
@@ -329,25 +331,13 @@ form {
 .promo-message {
   font-size: var(--fs-md);
 
-  h1 {
-    line-height: 1.1;
-    margin-bottom: 35px;
-
-    @media (width <= 1024px) {
-      display: none;
-    }
-
-    @media (width <= 1024px) {
-      text-align: center;
-      margin: 40px 0;
-      font-size: var(--fs-xxl);
-    }
+  @media (width <= 1024px) {
+    display: none;
   }
 
-  p {
-    @media (width <= 1024px) {
-      display: none;
-    }
+  h1 {
+    line-height: 1;
+    margin-bottom: 35px;
   }
 
   strong {
@@ -360,10 +350,6 @@ form {
     justify-content: center;
     margin-top: 40px;
 
-    @media (width <= 1024px) {
-      display: none;
-    }
-
     img {
       width: 25px;
       margin: 10px;
@@ -372,8 +358,8 @@ form {
 }
 
 dialog {
-  background: #fff;
-  color: #000;
+  background: var(--color-white);
+  color: var(--color-black);
   border: none;
   border-radius: 25px;
   padding: 0;
@@ -381,18 +367,39 @@ dialog {
   opacity: 0;
   filter: blur(7px);
   transform: translateY(-5%);
-  transition: all 1s ease-in-out;
+  transition:
+    opacity var(--transition-slow),
+    filter var(--transition-slow),
+    transform var(--transition-slow);
 
   &.is-visible {
+    opacity: 1;
     filter: blur(0);
     transform: translateY(0);
+  }
+
+  &[open] {
     opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+
+  @starting-style {
+    &[open] {
+      opacity: 0;
+      filter: blur(7px);
+      transform: translateY(-5%);
+    }
+  }
+
+  &.closing {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translateY(-5%);
   }
 
   &::backdrop {
-    background-color: rgb(0 0 0 / 0%);
-    backdrop-filter: blur(0);
-    transition: all 1s ease-in-out;
+    transition: all var(--transition-slow);
     cursor: pointer;
   }
 
@@ -416,15 +423,10 @@ dialog {
 
 #confetti-canvas {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0; /* reemplaza top/left + width/height: 100v* */
   pointer-events: none;
   border: none;
   background: transparent;
-  margin: 0;
-  padding: 0;
 }
 
 .modal__panel {
@@ -434,7 +436,6 @@ dialog {
     width: 330px;
     background: url("assets/img/background-modal.jpg") no-repeat center;
     background-size: cover;
-    border-radius: 25px 0 0 25px;
 
     @media (width <= 768px) {
       display: none;
@@ -502,9 +503,9 @@ dialog {
         .modal__chip {
           border-radius: 18px;
           padding: 4px 10px;
-          font-size: 11px;
-          color: var(--color-ternary);
-          background: rgb(230 255 213);
+          font-size: var(--fs-xxs);
+          color: var(--color-tertiary);
+          background: color-mix(in srgb, var(--color-secondary) 12%, white);
         }
 
         .modal__name {
@@ -520,7 +521,7 @@ dialog {
           font-weight: lighter;
 
           &:last-child {
-            font-size: 13px;
+            font-size: var(--fs-xxs);
           }
 
           .modal__icon-info {
@@ -536,12 +537,12 @@ dialog {
       }
     }
 
-    .modal__cta {
+    footer {
       margin-top: 40px;
       text-align: right;
 
       a {
-        color: var(--color-ternary);
+        color: var(--color-tertiary);
         text-decoration: none;
       }
     }
@@ -553,7 +554,7 @@ dialog {
   padding: 4px;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #267429;
+  background: var(--color-tertiary);
 
   --m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
 

@@ -10,7 +10,7 @@ const closeBtn = document.querySelector('.modal__close-btn');
 const modalContent = document.querySelector('.modal__profile');
 const fechaActual = document.querySelector('.modal__date');
 const inputPhone = document.getElementById('phone');
-const registrar = document.querySelector('.btn');
+const registrar = document.querySelector('.registration-btn');
 const PREFIX = '+56 9 ';
 const canvas = document.getElementById('confetti-canvas');
 const passwordInput = document.getElementById('password');
@@ -207,13 +207,15 @@ form.addEventListener('submit', (e) => {
 
   if (allValid) {
     loader()
-    getValue();
-    canvas.showPopover();
-    lanzarConfetti();
-    modal.classList.add('is-visible');
-    const loaderRemove = document.querySelector('.loader');
-    loaderRemove.remove()
-    registrar.textContent = 'Registrar'
+    setTimeout(() => {
+      getValue();
+      canvas.showPopover();
+      lanzarConfetti();
+      modal.classList.add('is-visible');
+      const loaderRemove = document.querySelector('.loader');
+      loaderRemove.remove()
+      registrar.textContent = 'Registrar'
+    }, 1000)
   }
 
   const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
