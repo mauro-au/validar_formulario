@@ -1,9 +1,25 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": ["stylelint-config-standard"],
   "rules": {
-    "selector-class-pattern": "^[a-z]+(?:-[a-z]+)*(?:__(?:[a-z]+(?:-[a-z]+)*))?(?:--(?:[a-z]+(?:-[a-z]+)*))?$",
+    "color-no-invalid-hex": true,
     "no-duplicate-selectors": true,
+    "no-empty-source": true,
     "shorthand-property-no-redundant-values": true,
-    "color-no-invalid-hex": true
+    "no-irregular-whitespace": true,
+
+    "color-named": "never",
+    "color-hex-length": "long",
+
+    "declaration-block-no-redundant-longhand-properties": true,
+    "declaration-no-important": true,
+
+    "selector-class-pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+
+    "import-notation": "string",
+
+    "alpha-value-notation": "percentage",
+    "length-zero-no-unit": true,
+
+    "custom-property-pattern": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
   }
 }

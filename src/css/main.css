@@ -5,14 +5,15 @@
   --color-tertiary: #338650;
   --color-text: #6e848d;
   --color-input: #1b272c;
-  --color-white: #fff;
-  --color-black: #000;
+  --color-white: #ffffff;
+  --color-black: #000000;
   --color-grey: #838383;
-  --color-error: #f00;
+  --color-error: #ff0000;
 
   /* Font-family tokens */
   --secure-sources:
-    sans-serif, serif, system-ui, monospace, cursive, -apple-system, "Segoe UI", arial;
+    sans-serif, serif, system-ui, monospace, cursive, -apple-system, 'Segoe UI',
+    arial;
 
   /* Font-size tokens */
   --fs-xxs: 0.8125rem; /* 13px */
@@ -41,7 +42,7 @@ html {
 
 body {
   font-family: RobotoLt, var(--secure-sources);
-  background: url("../assets/img/background-site.jpg") no-repeat bottom fixed;
+  background: url('../assets/img/background-site.jpg') no-repeat bottom fixed;
   background-size: cover;
   font-size: var(--fs-sm);
 
@@ -92,7 +93,7 @@ h2 {
 
       h1 {
         font-size: var(--fs-xl);
-        color: #fff;
+        color: #ffffff;
         text-align: center;
         margin: 20px;
       }
@@ -176,7 +177,7 @@ form {
         font: inherit;
 
         &::placeholder {
-          opacity: 0.5;
+          opacity: 50%;
         }
 
         &:where(:focus-visible) {
@@ -201,7 +202,7 @@ form {
         display: flex;
 
         i {
-          opacity: 0.5;
+          opacity: 50%;
         }
       }
 
@@ -226,7 +227,7 @@ form {
       margin-bottom: 20px;
       gap: 10px;
 
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         appearance: none;
         width: 18px;
         height: 18px;
@@ -237,18 +238,18 @@ form {
         padding: 0;
       }
 
-      input[type="checkbox"]:checked {
+      input[type='checkbox']:checked {
         background-color: var(--color-secondary);
         border-color: var(--color-secondary);
       }
 
-      input[type="checkbox"]:checked::after {
-        content: "";
+      input[type='checkbox']:checked::after {
+        content: '';
         position: relative;
         display: block;
         width: 5px;
         height: 10px;
-        border: solid black;
+        border: solid var(--color-black);
         border-width: 0 2px 2px 0;
         transform: rotate(45deg);
         margin: 1px auto;
@@ -278,7 +279,8 @@ form {
 
       &:hover {
         filter: brightness(1.1);
-        box-shadow: 0 5px 25px -3px color-mix(in srgb, var(--color-secondary) 40%, transparent);
+        box-shadow: 0 5px 25px -3px
+          color-mix(in srgb, var(--color-secondary) 40%, transparent);
       }
     }
   }
@@ -319,17 +321,17 @@ form {
 }
 
 .icon-eye-off {
-  opacity: 0;
+  opacity: 0%;
   transform: scale(0.8);
 }
 
 .toggle-btn.visible .icon-eye {
-  opacity: 0;
+  opacity: 0%;
   transform: scale(0.8);
 }
 
 .toggle-btn.visible .icon-eye-off {
-  opacity: 1;
+  opacity: 100%;
   transform: scale(1);
 }
 
@@ -369,7 +371,7 @@ dialog {
   border-radius: 25px;
   padding: 0;
   font-weight: bold;
-  opacity: 0;
+  opacity: 0%;
   filter: blur(7px);
   transform: translateY(-5%);
   transition:
@@ -378,27 +380,27 @@ dialog {
     transform var(--transition-slow);
 
   &.is-visible {
-    opacity: 1;
+    opacity: 100%;
     filter: blur(0);
     transform: translateY(0);
   }
 
   &[open] {
-    opacity: 1;
+    opacity: 100%;
     filter: blur(0);
     transform: translateY(0);
   }
 
   @starting-style {
     &[open] {
-      opacity: 0;
+      opacity: 0%;
       filter: blur(7px);
       transform: translateY(-5%);
     }
   }
 
   &.closing {
-    opacity: 0;
+    opacity: 0%;
     filter: blur(7px);
     transform: translateY(-5%);
   }
@@ -439,7 +441,7 @@ dialog {
 
   .modal__illustration {
     width: 330px;
-    background: url("../assets/img/background-modal.jpg") no-repeat center;
+    background: url('../assets/img/background-modal.jpg') no-repeat center;
     background-size: cover;
 
     @media (width <= 768px) {
@@ -510,7 +512,11 @@ dialog {
           padding: 4px 10px;
           font-size: var(--fs-xxs);
           color: var(--color-tertiary);
-          background: color-mix(in srgb, var(--color-secondary) 12%, white);
+          background: color-mix(
+            in srgb,
+            var(--color-secondary) 12%,
+            var(--color-white)
+          );
         }
 
         .modal__name {
@@ -561,7 +567,9 @@ dialog {
   border-radius: 50%;
   background: var(--color-tertiary);
 
-  --m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  --m:
+    conic-gradient(#00000000 10%, #000000),
+    linear-gradient(#000000 0 0) content-box;
 
   mask: var(--m);
   mask-composite: subtract;

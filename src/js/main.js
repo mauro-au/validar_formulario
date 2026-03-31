@@ -46,9 +46,12 @@ togglePasswordButton.addEventListener('click', () => {
   if (passwordInput.value !== '') {
     passwordInput.type = isHidden ? 'text' : 'password';
     togglePasswordButton.classList.toggle('visible', isHidden);
-    togglePasswordButton.setAttribute('aria-label', isHidden ? 'Ocultar contraseña' : 'Mostrar contraseña');
+    togglePasswordButton.setAttribute(
+      'aria-label',
+      isHidden ? 'Ocultar contraseña' : 'Mostrar contraseña'
+    );
   }
-})
+});
 
 const getValue = () => {
   const template = document.createElement('template');
@@ -128,7 +131,8 @@ const clearError = (input) => {
 
 // Validador central por campo. Devuelve { valid, message }
 const validateInput = (input) => {
-  if (input.value.trim() === '') return { valid: false, message: MESSAGES.empty };
+  if (input.value.trim() === '')
+    return { valid: false, message: MESSAGES.empty };
 
   const validator = FIELD_VALIDATORS[input.id];
   if (validator && !validator(input)) {
@@ -151,9 +155,9 @@ const handleInput = (e) => {
 const loader = () => {
   const loader = document.createElement('div');
   loader.classList.add('loader');
-  registrar.textContent = ''
+  registrar.textContent = '';
   registrar.appendChild(loader);
-}
+};
 
 function lanzarConfetti() {
   // Centro lado izquierdo
@@ -161,7 +165,7 @@ function lanzarConfetti() {
     particleCount: 80,
     angle: 60,
     spread: 60,
-    origin: { x: 0, y: 0.5 }
+    origin: { x: 0, y: 0.5 },
   });
 
   // Centro lado derecho
@@ -169,18 +173,18 @@ function lanzarConfetti() {
     particleCount: 80,
     angle: 120,
     spread: 60,
-    origin: { x: 1, y: 0.5 }
+    origin: { x: 1, y: 0.5 },
   });
 }
 
-inputPhone.addEventListener('input', function() {
+inputPhone.addEventListener('input', function () {
   // Si el usuario intenta borrar el prefijo, se vuelve a poner
-  if (!inputPhone.value.startsWith(PREFIX )) {
-      inputPhone.value = PREFIX ;
+  if (!inputPhone.value.startsWith(PREFIX)) {
+    inputPhone.value = PREFIX;
   }
 });
 
-inputPhone.addEventListener('keydown', function(e) {
+inputPhone.addEventListener('keydown', function (e) {
   // Evita que el cursor retroceda antes del prefijo con la tecla borrar
   const isDeleting = e.key === 'Backspace' || e.key === 'Delete';
   const isBeforePrefix = inputPhone.selectionStart <= PREFIX.length;
@@ -190,10 +194,10 @@ inputPhone.addEventListener('keydown', function(e) {
   }
 });
 
-inputPhone.addEventListener('click', function() {
+inputPhone.addEventListener('click', function () {
   // Si hace clic al inicio, mueve el cursor al final del prefijo
   if (inputPhone.selectionStart < PREFIX.length) {
-      inputPhone.setSelectionRange(PREFIX.length, PREFIX.length);
+    inputPhone.setSelectionRange(PREFIX.length, PREFIX.length);
   }
 });
 
@@ -213,16 +217,16 @@ form.addEventListener('submit', (e) => {
   });
 
   if (allValid) {
-    loader()
+    loader();
     setTimeout(() => {
       getValue();
       canvas.showPopover();
       lanzarConfetti();
       modal.classList.add('is-visible');
       const loaderRemove = document.querySelector('.loader');
-      loaderRemove.remove()
-      registrar.textContent = 'Registrar'
-    }, 1000)
+      loaderRemove.remove();
+      registrar.textContent = 'Registrar';
+    }, 1000);
   }
 
   const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -231,23 +235,23 @@ form.addEventListener('submit', (e) => {
 
 const closeModal = () => {
   modal.classList.remove('is-visible');
-  modal.classList.add("closing");
+  modal.classList.add('closing');
   setTimeout(() => {
-    modal.classList.remove("closing");
+    modal.classList.remove('closing');
     modal.close();
     document.body.classList.remove('modal-open');
     canvas.hidePopover();
     clearModal();
   }, 1000);
   clearInputs();
-}
+};
 
 window.addEventListener('resize', () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 });
 
-modal.addEventListener('click', e => {
+modal.addEventListener('click', (e) => {
   if (e.target === modal) {
     closeModal();
   }
