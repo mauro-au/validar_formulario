@@ -250,7 +250,7 @@ form {
       }
 
       label {
-        font-size: var(--fs-xxs);
+        font-size: var(--fs-xs);
       }
 
       small {
