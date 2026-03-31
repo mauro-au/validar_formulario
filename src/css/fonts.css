@@ -1,8 +1,8 @@
 @font-face {
   font-family: RobotoLt;
   src:
-    url("../assets/fonts/Roboto-Light.woff2") format("woff2"),
-    url("../assets/fonts/Roboto-Light.woff") format("woff");
+    url('/fonts/Roboto-Light.woff2') format('woff2'),
+    url('/fonts/Roboto-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,8 @@
 @font-face {
   font-family: RobotoNormal;
   src:
-    url("../assets/fonts/Roboto-Regular.woff2") format("woff2"),
-    url("../assets/fonts/Roboto-Regular.woff") format("woff");
+    url('/fonts/Roboto-Regular.woff2') format('woff2'),
+    url('/fonts/Roboto-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -23,8 +23,8 @@
 @font-face {
   font-family: CreatoDisplayBl;
   src:
-    url("../assets/fonts/CreatoDisplay-Black.woff2") format("woff2"),
-    url("../assets/fonts/CreatoDisplay-Black.woff") format("woff");
+    url('/fonts/CreatoDisplay-Black.woff2') format('woff2'),
+    url('/fonts/CreatoDisplay-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
   font-display: swap;

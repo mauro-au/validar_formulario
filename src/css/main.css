@@ -41,7 +41,7 @@ html {
 
 body {
   font-family: RobotoLt, var(--secure-sources);
-  background: url("assets/img/background-site.jpg") no-repeat bottom fixed;
+  background: url("../assets/img/background-site.jpg") no-repeat bottom fixed;
   background-size: cover;
   font-size: var(--fs-sm);
 
@@ -439,7 +439,7 @@ dialog {
 
   .modal__illustration {
     width: 330px;
-    background: url("assets/img/background-modal.jpg") no-repeat center;
+    background: url("../assets/img/background-modal.jpg") no-repeat center;
     background-size: cover;
 
     @media (width <= 768px) {

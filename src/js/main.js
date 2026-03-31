@@ -1,3 +1,7 @@
+import '../css/reset.css';
+import '../css/fonts.css';
+import '../css/main.css';
+
 const form = document.querySelector('form');
 const nameInput = document.querySelector('#name');
 const email = document.querySelector('#email');
