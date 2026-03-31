@@ -66,6 +66,7 @@ const getValue = () => {
 
   modalContent.appendChild(template.content.cloneNode(true));
   modal.showModal();
+  document.body.classList.add('modal-open');
 };
 
 const createError = (parent, message) => {
@@ -228,6 +229,7 @@ const closeModal = () => {
   setTimeout(() => {
     modal.classList.remove("closing");
     modal.close();
+    document.body.classList.remove('modal-open');
     canvas.hidePopover();
     clearModal();
   }, 1000);
