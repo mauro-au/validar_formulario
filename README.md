@@ -11,7 +11,7 @@
 ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
 ```
 
-### Interfaz de registro — construida sin frameworks.
+### ✨ Interfaz de registro — hecho desde cero sin frameworks ✨
 
 <br/>
 
@@ -27,19 +27,24 @@
 </div>
 
 <div align="center">
-<img src="https://readme-typing-svg.demolab.com?font=monospace&pause=1000&color=1ED860&center=true&width=300&lines=Vanilla+JS+·+CSS+·+Vite" />
+  
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1ED860&center=true&width=435&lines=Vanilla++JS+%C2%B7+CSS+%C2%B7+Vite)](https://git.io/typing-svg)
 
 ——————————————— ● ———————————————
-
 </div>
 
+<br/>
 
 ## 📝 Descripción
 
 Página de registro completamente artesanal que demuestra técnicas modernas de frontend sin usar ningún framework. Cada animación, interacción y componente está escrito en HTML, CSS y JavaScript vanilla — con foco en arquitectura limpia y calidad de producción.
 
+<br/>
+
 > [!NOTE]
 > Construido como exploración profunda de las capacidades modernas de CSS y JS: CSS nesting, `@starting-style`, ES modules, y más.
+
+<br/>
 
 ## ✨ Funcionalidades
 
@@ -93,6 +98,8 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 </tr>
 </table>
 
+<br/>
+
 ## 📁 Estructura del proyecto
 
 ```
@@ -130,11 +137,13 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 ├── .prettierrc
 └── .stylelintrc.json
 ```
+<br/>
 
 ## 🎉Vista Proyecto
 
 <img width="2427" height="1320" alt="imagen" src="https://github.com/user-attachments/assets/df12411f-97e8-43bb-b87d-5947500b4b59" />
 
+<br/>
 
 ## 🚀 Cómo empezar
 
@@ -143,6 +152,7 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 - Node.js `>=18`
 - pnpm `>=9` — [Instalación](https://pnpm.io/installation)
 
+> [!TIP]
 > **¿Por qué pnpm?** Usa un almacén de paquetes compartido en disco, instala más rápido que npm/yarn y evita instalaciones duplicadas entre proyectos.
 
 ### Instalación y ejecución
@@ -169,7 +179,9 @@ pnpm lint       # ESLint + Stylelint
 pnpm format     # Prettier
 ```
 
-Decisiones técnicas destacadas
+<br/>
+
+## 🧠 Decisiones técnicas destacadas
 
 ### Animación del dialog con `@starting-style`
 
@@ -209,6 +221,7 @@ La salida aún usa una clase `.closing` + `transitionend` por seguridad cross-br
   <canvas id="confetti-canvas"></canvas>
 </div>
 ```
+<br/>
 
 ## 🌐 Compatibilidad con navegadores
 
@@ -220,6 +233,7 @@ La salida aún usa una clase `.closing` + `transitionend` por seguridad cross-br
 | Popover API        | ✅ 114+ | ✅ 125+    | ✅ 17+   |
 | `scrollbar-gutter` | ✅ 94+  | ✅ 97+     | ✅ 15.4+ |
 
+> [!WARNING]
 > `@starting-style` usa `@supports (transition-behavior: allow-discrete)` como proxy de detección de features, con fallback a animación basada en clases JS para Firefox.
 
 <div align="center">
