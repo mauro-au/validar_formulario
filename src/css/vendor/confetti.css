@@ -1,0 +1,7 @@
+#confetti-canvas {
+  position: fixed;
+  inset: 0; /* reemplaza top/left + width/height: 100v* */
+  pointer-events: none;
+  border: none;
+  background: transparent;
+}

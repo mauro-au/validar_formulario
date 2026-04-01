@@ -1,5 +1,3 @@
-import '../css/reset.css';
-import '../css/fonts.css';
 import '../css/main.css';
 
 import confetti from 'canvas-confetti';
@@ -177,14 +175,14 @@ function lanzarConfetti() {
   });
 }
 
-inputPhone.addEventListener('input', function () {
+inputPhone.addEventListener('input', () => {
   // Si el usuario intenta borrar el prefijo, se vuelve a poner
   if (!inputPhone.value.startsWith(PREFIX)) {
     inputPhone.value = PREFIX;
   }
 });
 
-inputPhone.addEventListener('keydown', function (e) {
+inputPhone.addEventListener('keydown', (e) => {
   // Evita que el cursor retroceda antes del prefijo con la tecla borrar
   const isDeleting = e.key === 'Backspace' || e.key === 'Delete';
   const isBeforePrefix = inputPhone.selectionStart <= PREFIX.length;
@@ -194,7 +192,7 @@ inputPhone.addEventListener('keydown', function (e) {
   }
 });
 
-inputPhone.addEventListener('click', function () {
+inputPhone.addEventListener('click', () => {
   // Si hace clic al inicio, mueve el cursor al final del prefijo
   if (inputPhone.selectionStart < PREFIX.length) {
     inputPhone.setSelectionRange(PREFIX.length, PREFIX.length);
