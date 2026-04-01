@@ -240,6 +240,6 @@ La salida aún usa una clase `.closing` + `transitionend` por seguridad cross-br
 
 ## Autor 😎
 
-Application developed by [**MauroDev**](https://github.com/mauro-au) 🤘​
+Application developed by  —>  🤖 [**MauroDev**](https://github.com/mauro-au) 🤘​​
 
 </div>
