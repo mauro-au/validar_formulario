@@ -10,11 +10,8 @@
 ██║  ██║███████╗╚██████╔╝██║███████║   ██║   ███████╗██║  ██║
 ╚═╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
 ```
-———————— ● ————————
 
 ### Interfaz de registro — construida sin frameworks.
-
-
 
 <br/>
 
@@ -27,15 +24,21 @@
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
 ![Stylelint](https://img.shields.io/badge/Stylelint-263238?style=for-the-badge&logo=stylelint&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
+</div>
 
-<br/>
+<div align="center">
+<img src="https://readme-typing-svg.demolab.com?font=monospace&pause=1000&color=1ED860&center=true&width=300&lines=Vanilla+JS+·+CSS+·+Vite" />
+
+——————————————— ● ———————————————
 
 </div>
+
 
 ## 📝 Descripción
 
 Página de registro completamente artesanal que demuestra técnicas modernas de frontend sin usar ningún framework. Cada animación, interacción y componente está escrito en HTML, CSS y JavaScript vanilla — con foco en arquitectura limpia y calidad de producción.
 
+> [!NOTE]
 > Construido como exploración profunda de las capacidades modernas de CSS y JS: CSS nesting, `@starting-style`, ES modules, y más.
 
 ## ✨ Funcionalidades

@@ -1,3 +1,9 @@
+/* breakpoints.css — fuente única de verdad */
+@custom-media --bp-xl (width <= 1280px);
+@custom-media --bp-lg (width <= 1024px);
+@custom-media --bp-md (width <= 768px);
+@custom-media --bp-sm (width <= 480px);
+
 :root {
   /* Color tokens */
   --color-primary: #0f1b1bea;
@@ -71,16 +77,16 @@ h2 {
   grid-template-columns: 540px 700px;
   gap: 30px;
 
-  @media (width <= 1280px) {
+  @media (--bp-xl) {
     grid-template-columns: 40% 50%;
   }
 
-  @media (width <= 1024px) {
+  @media (--bp-lg) {
     grid-template-columns: 1fr;
     width: 60%;
   }
 
-  @media (width <= 768px) {
+  @media (--bp-md) {
     width: 85%;
   }
 
@@ -88,7 +94,7 @@ h2 {
     background: var(--color-primary);
     border-radius: 20px;
 
-    @media (width <= 1024px) {
+    @media (--bp-lg) {
       order: 2;
 
       h1 {
@@ -107,7 +113,7 @@ h2 {
     padding: 40px;
     color: var(--color-white);
 
-    @media (width <= 1024px) {
+    @media (--bp-lg) {
       order: 1;
       justify-content: initial;
       align-items: center;
@@ -127,11 +133,11 @@ h2 {
   padding: 10px;
   width: 130px;
 
-  @media (width <= 1024px) {
+  @media (--bp-lg) {
     width: 115px;
   }
 
-  @media (width <= 768px) {
+  @media (--bp-md) {
     width: 100px;
   }
 
@@ -144,7 +150,7 @@ form {
   padding: 0 40px;
   color: var(--color-text);
 
-  @media (width <= 480px) {
+  @media (--bp-sm) {
     padding: 0 25px;
   }
 
@@ -338,7 +344,7 @@ form {
 .promo-message {
   font-size: var(--fs-md);
 
-  @media (width <= 1024px) {
+  @media (--bp-lg) {
     display: none;
   }
 
@@ -444,7 +450,7 @@ dialog {
     background: url('../assets/img/background-modal.jpg') no-repeat center;
     background-size: cover;
 
-    @media (width <= 768px) {
+    @media (--bp-md) {
       display: none;
     }
   }
@@ -453,7 +459,7 @@ dialog {
     padding: 40px;
     width: 460px;
 
-    @media (width <= 480px) {
+    @media (--bp-sm) {
       width: 100%;
       padding: 25px;
     }
@@ -488,7 +494,7 @@ dialog {
       border-radius: 25px;
       box-shadow: 0 5px 25px -3px rgb(0 0 0 / 13%);
 
-      @media (width <= 768px) {
+      @media (--bp-md) {
         flex-direction: column;
       }
 
@@ -501,7 +507,7 @@ dialog {
       .modal__info {
         margin-left: 15px;
 
-        @media (width <= 768px) {
+        @media (--bp-md) {
           margin-left: 0;
           margin-top: 5px;
           text-align: center;
@@ -541,7 +547,7 @@ dialog {
             color: rgb(77 77 77 / 56%);
           }
 
-          @media (width <= 768px) {
+          @media (--bp-md) {
             justify-content: center;
           }
         }
