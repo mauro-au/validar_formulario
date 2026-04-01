@@ -125,6 +125,9 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 
 ## 🎉Vista Proyecto
 
+<img width="2427" height="1320" alt="imagen" src="https://github.com/user-attachments/assets/df12411f-97e8-43bb-b87d-5947500b4b59" />
+
+
 ## 🚀 Cómo empezar
 
 ### Requisitos
