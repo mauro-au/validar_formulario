@@ -28,7 +28,7 @@
 
 <div align="center">
   
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1ED860&center=true&width=435&lines=Vanilla++JS+%C2%B7+CSS+%C2%B7+Vite)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1ED860&center=true&vCenter=true&width=435&lines=Vanilla++JS+%C2%B7+CSS+%C2%B7+Vite)](https://git.io/typing-svg)
 
 ——————————————— ● ———————————————
 </div>
