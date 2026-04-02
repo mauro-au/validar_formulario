@@ -114,6 +114,10 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 │   ├── assets/
 │   │   └── img/
 │   │       ├── social-white/
+│   │       │   ├── facebook.svg
+│   │       │   ├── instagram.svg
+│   │       │   ├── x.svg
+│   │       │   └── youtube.svg
 │   │       ├── background-modal.jpg
 │   │       ├── background-site.jpg
 │   │       └── logo-aurora.svg
@@ -122,9 +126,18 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 │   │   ├── base/
 │   │   │   ├── fonts.css
 │   │   │   ├── reset.css
+│   │   │   ├── root.css
+│   │   │   ├── typography.css
 │   │   │   └── variables.css
 │   │   ├── components/
-│   │   │   └── modal.css
+│   │   │   ├── avatar.css
+│   │   │   ├── form.css
+│   │   │   ├── loader.css
+│   │   │   ├── modal.css
+│   │   │   ├── promo.css
+│   │   │   ├── toggle.css
+│   │   ├── layout/
+│   │   │   └── register-page.css
 │   │   ├── vendor/
 │   │   │   └── confetti.css
 │   │   └── main.css
