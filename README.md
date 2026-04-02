@@ -103,39 +103,46 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 ## 📁 Estructura del proyecto
 
 ```
-├── assets/
-│   ├── img/
-│   │   ├── background-site.jpg
-│   │   └── background-modal.jpg
-│   └── fonts/
-│       ├── RobotoLt.woff2
-│       └── CreatoDisplayBl.woff2
+│
+├── public/
+│   ├── fonts/
+│   ├── favicon.ico
+│   ├── favicon.png
+│   └── favicon.svg
 │
 ├── src/
-│   ├── js/
-│   │   ├── main.js          # punto de entrada
-│   │   ├── modal.js         # apertura/cierre del dialog + animaciones
-│   │   ├── confetti.js      # canvas-confetti vía Popover API
-│   │   ├── password.js      # toggle, medidor de fortaleza, validación
-│   │   └── form.js          # orquestación de validación
+│   ├── assets/
+│   │   └── img/
+│   │       ├── social-white/
+│   │       ├── background-modal.jpg
+│   │       ├── background-site.jpg
+│   │       └── logo-aurora.svg
 │   │
-│   └── css/
-│       ├── main.css          # declaración de @layer + imports
-│       ├── tokens.css        # custom properties
-│       ├── base.css          # html, body, tipografía
-│       ├── layout.css        # grilla de register-page
-│       └── components/
-│           ├── form.css
-│           ├── dialog.css
-│           ├── modal.css
-│           └── loader.css
+│   ├── css/
+│   │   ├── base/
+│   │   │   ├── fonts.css
+│   │   │   ├── reset.css
+│   │   │   └── variables.css
+│   │   ├── components/
+│   │   │   └── modal.css
+│   │   ├── vendor/
+│   │   │   └── confetti.css
+│   │   └── main.css
+│   │
+│   └── js/
+│       └── main.js
 │
-├── index.html
-├── vite.config.js
-├── postcss.config.js
-├── eslint.config.js
+├── .browserslistrc
+├── .gitignore
+├── .prettierignore
 ├── .prettierrc
-└── .stylelintrc.json
+├── .stylelintrc.json
+├── eslint.config.js
+├── index.html
+├── package.json
+├── postcss.config.js
+├── README.md
+└── vite.config.js
 ```
 <br/>
 
