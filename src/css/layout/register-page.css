@@ -1,0 +1,56 @@
+.register-page {
+  margin: 0 auto;
+  padding: 40px 0;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 540px 700px;
+  gap: 30px;
+
+  @media (--bp-xl) {
+    grid-template-columns: 40% 50%;
+  }
+
+  @media (--bp-lg) {
+    grid-template-columns: 1fr;
+    width: 60%;
+  }
+
+  @media (--bp-md) {
+    width: 85%;
+  }
+
+  .register-page__form {
+    background: var(--color-primary);
+    border-radius: 20px;
+
+    @media (--bp-lg) {
+      order: 2;
+
+      h1 {
+        font-size: var(--fs-xl);
+        color: #ffffff;
+        text-align: center;
+        margin: 20px;
+      }
+    }
+  }
+
+  .register-page__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    color: var(--color-white);
+
+    @media (--bp-lg) {
+      order: 1;
+      justify-content: initial;
+      align-items: center;
+      padding: 10px;
+
+      img {
+        width: 290px;
+      }
+    }
+  }
+}

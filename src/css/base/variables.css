@@ -35,7 +35,7 @@
   --transition-slow: 0.7s ease-in-out;
 }
 
-/* breakpoints.css — fuente única de verdad */
+/* breakpoints */
 @custom-media --bp-xl (width <= 1280px);
 @custom-media --bp-lg (width <= 1024px);
 @custom-media --bp-md (width <= 768px);

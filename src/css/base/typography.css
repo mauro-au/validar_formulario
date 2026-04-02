@@ -1,0 +1,11 @@
+:is(h1, h2) {
+  font-family: CreatoDisplayBl, var(--secure-sources);
+}
+
+h1 {
+  font-size: var(--fs-hero);
+}
+
+h2 {
+  font-size: var(--fs-xl);
+}

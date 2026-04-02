@@ -1,0 +1,15 @@
+html {
+  font-size: 100%;
+  scrollbar-gutter: stable;
+}
+
+body {
+  font-family: RobotoLt, var(--secure-sources);
+  background: url('../../assets/img/background-site.jpg') no-repeat bottom fixed;
+  background-size: cover;
+  font-size: var(--fs-sm);
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}

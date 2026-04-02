@@ -1,0 +1,28 @@
+.promo-message {
+  font-size: var(--fs-md);
+
+  @media (--bp-lg) {
+    display: none;
+  }
+
+  h1 {
+    line-height: 1;
+    margin-bottom: 35px;
+  }
+
+  strong {
+    color: var(--color-secondary);
+    font-weight: bold;
+  }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    img {
+      width: 25px;
+      margin: 10px;
+    }
+  }
+}

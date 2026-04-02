@@ -1,0 +1,42 @@
+.toggle-btn {
+  position: absolute;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.toggle-btn:is(:hover, :active) {
+  background: var(--color-primary);
+}
+
+:is(.icon-eye, .icon-eye-off) {
+  position: absolute;
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+
+.icon-eye-off {
+  opacity: 0%;
+  transform: scale(0.8);
+}
+
+.toggle-btn.visible .icon-eye {
+  opacity: 0%;
+  transform: scale(0.8);
+}
+
+.toggle-btn.visible .icon-eye-off {
+  opacity: 100%;
+  transform: scale(1);
+}

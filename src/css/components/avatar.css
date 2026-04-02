@@ -1,0 +1,19 @@
+.avatar {
+  margin: 30px auto;
+  border: 3px solid color-mix(in srgb, var(--color-secondary) 24%, transparent);
+  border-radius: 50%;
+  padding: 10px;
+  width: 130px;
+
+  @media (--bp-lg) {
+    width: 115px;
+  }
+
+  @media (--bp-md) {
+    width: 100px;
+  }
+
+  img {
+    border-radius: 50%;
+  }
+}
