@@ -145,6 +145,11 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 
 <br/>
 
+<img width="2509" height="1303" alt="imagen" src="https://github.com/user-attachments/assets/1772aa0e-45b8-4282-bc13-be8a305d78b0" />
+
+
+<br/>
+
 ## 🚀 Cómo empezar
 
 ### Requisitos
