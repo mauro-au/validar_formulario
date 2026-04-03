@@ -5,7 +5,10 @@ html {
 
 body {
   font-family: RobotoLt, var(--secure-sources);
-  background: url('../../assets/img/background-site.jpg') no-repeat bottom fixed;
+  background-image: url('/images/background-site.jpg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
   background-size: cover;
   font-size: var(--fs-sm);
 

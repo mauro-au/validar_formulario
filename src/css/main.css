@@ -5,16 +5,16 @@
 @import './base/root.css';
 @import './base/typography.css';
 
+/* Layout */
+@import './layout/register-page.css';
+
 /* Components */
 @import './components/avatar.css';
 @import './components/form.css';
 @import './components/loader.css';
 @import './components/toggle.css';
-@import './components/modal.css';
 @import './components/promo.css';
-
-/* Layout */
-@import './layout/register-page.css';
+@import './components/modal.css';
 
 /* Vendor */
 @import './vendor/confetti.css';
