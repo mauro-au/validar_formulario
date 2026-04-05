@@ -67,7 +67,7 @@ dialog {
 
   .modal__illustration {
     width: 330px;
-    background-image: url('/images/background-modal.jpg');
+    background-image: url('../../assets/images/background-modal.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

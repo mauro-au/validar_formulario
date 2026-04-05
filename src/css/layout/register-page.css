@@ -25,13 +25,6 @@
 
     @media (--bp-lg) {
       order: 2;
-
-      h1 {
-        font-size: var(--fs-xl);
-        color: #ffffff;
-        text-align: center;
-        margin: 20px;
-      }
     }
   }
 
