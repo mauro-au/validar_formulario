@@ -24,6 +24,7 @@
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
 ![Stylelint](https://img.shields.io/badge/Stylelint-263238?style=for-the-badge&logo=stylelint&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
+
 </div>
 
 <div align="center">
@@ -31,6 +32,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=1ED860&center=true&vCenter=true&width=435&lines=Vanilla++JS+%C2%B7+CSS+%C2%B7+Vite)](https://git.io/typing-svg)
 
 ——————————————— ● ———————————————
+
 </div>
 
 <br/>
@@ -142,9 +144,22 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 │   │   │   └── confetti.css
 │   │   └── main.css
 │   │
-│   └── js/
-│       └── main.js
-│
+│   ├── js/
+│   │   ├── constants/
+│   │   │   └── constants.js
+│   │   ├── lib/
+│   │   │   └── confetti.js
+│   │   ├── ui/
+│   │   │   ├── error.js
+│   │   │   ├── loader.js
+│   │   │   ├── modal.js
+│   │   │   └── success.js
+│   │   ├── validators/
+│   │   │   ├── emailValidator.js
+│   │   │   ├── phoneValidator.js
+│   │   │   └── validators.js
+│   │   └── main.js
+│   │
 ├── .browserslistrc
 ├── .gitignore
 ├── .prettierignore
@@ -157,6 +172,7 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 ├── README.md
 └── vite.config.js
 ```
+
 <br/>
 
 ## 🎉Vista Proyecto
@@ -172,7 +188,6 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 <br/>
 
 <img width="2509" height="1303" alt="imagen" src="https://github.com/user-attachments/assets/1772aa0e-45b8-4282-bc13-be8a305d78b0" />
-
 
 <br/>
 
@@ -252,6 +267,7 @@ La salida aún usa una clase `.closing` + `transitionend` por seguridad cross-br
   <canvas id="confetti-canvas"></canvas>
 </div>
 ```
+
 <br/>
 
 ## 🌐 Compatibilidad con navegadores
