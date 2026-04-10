@@ -177,9 +177,7 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 
 ## 🎉Vista Proyecto
 
-### 🚀 Demo
-
-👇🏻 **Prueba la aplicación aquí:**
+### 🚀 Demo 👇🏻 Prueba la aplicación aquí:
 
 🔗 https://validate-form-aurora.netlify.app/
 
@@ -193,7 +191,7 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 
 ## 🚀 Cómo empezar
 
-### Requisitos
+### 📋 Requisitos
 
 - Node.js `>=18`
 - pnpm `>=9` — [Instalación](https://pnpm.io/installation)
@@ -201,7 +199,7 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 > [!TIP]
 > **¿Por qué pnpm?** Usa un almacén de paquetes compartido en disco, instala más rápido que npm/yarn y evita instalaciones duplicadas entre proyectos.
 
-### Instalación y ejecución
+### 🛠️ Instalación y ejecución
 
 ```bash
 # Clonar el repositorio
@@ -215,21 +213,27 @@ pnpm install
 pnpm dev
 ```
 
-### Scripts disponibles
+### 📜 Scripts disponibles
 
 ```bash
-pnpm dev        # Servidor Vite con HMR
-pnpm build      # Build de producción → /dist
-pnpm preview    # Preview del build de producción en local
-pnpm lint       # ESLint + Stylelint
-pnpm format     # Prettier
+pnpm dev           # Inicia el servidor de desarrollo con Vite
+pnpm build         # Genera la build de producción
+pnpm preview       # Previsualiza la build generada
+
+pnpm lint          # Ejecuta ESLint en JS
+pnpm lint:fix      # Corrige errores de ESLint automáticamente
+
+pnpm format        # Formatea archivos con Prettier
+
+pnpm lint:css      # Ejecuta Stylelint en CSS
+pnpm lint:css:fix  # Corrige errores de CSS automáticamente
 ```
 
 <br/>
 
 ## 🧠 Decisiones técnicas destacadas
 
-### Animación del dialog con `@starting-style`
+### 🎞️ Animación del dialog con `@starting-style`
 
 La entrada del modal usa CSS nativo — sin necesidad de togglear clases con JS para el estado de apertura:
 
@@ -258,7 +262,7 @@ dialog {
 
 La salida aún usa una clase `.closing` + `transitionend` por seguridad cross-browser — el soporte de `overlay allow-discrete` en Firefox es incompleto a 2025.
 
-### Confetti vía Popover API
+### 🎉 Confetti vía Popover API
 
 `canvas-confetti` necesita renderizar en un `<canvas>` por encima del Top Layer del `<dialog>`. Envolviéndolo en un elemento `popover` lo promueve al Top Layer _después_ del dialog, resolviendo el conflicto de apilamiento sin hacks:
 
