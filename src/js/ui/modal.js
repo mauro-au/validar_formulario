@@ -5,7 +5,11 @@ const clearModal = (modalContent) => {
 };
 
 const clearInputsModal = (FIELDS, checkbox) => {
-  FIELDS.forEach((f) => (f.value = ''));
+  FIELDS.forEach((f) => {
+    if (f.type !== 'checkbox') {
+      f.value = '';
+    }
+  });
   checkbox.checked = false;
 };
 
@@ -34,7 +38,7 @@ export const createModal = ({
   template.innerHTML = `
     <div class="modal__card">
       <figure class="modal__avatar">
-        <img src="https://static.photos/nature/200x200" width="70" alt="Imagen aleatoria de naturaleza para el avatar">
+        <img src="https://static.photos/nature/200x200" width="70" alt="Avatar del usuario">
       </figure>
       <div class="modal__info">
         <span class="modal__chip">${userName.value}</span>

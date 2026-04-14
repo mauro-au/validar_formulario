@@ -8,17 +8,17 @@ export const resizeCanvas = (canvas) => {
 export const launchConfetti = (canvas) => {
   const myConfetti = confetti.create(canvas, { resize: false });
 
-  const base = { particleCount: 80, spread: 60 };
-  // Centro lado izquierdo
+  const baseConfig = { particleCount: 80, spread: 60 };
+
   myConfetti({
-    ...base,
+    ...baseConfig,
     angle: 60,
     origin: { x: 0, y: 0.5 },
   });
-  // Centro lado derecho
+
   myConfetti({
-    ...base,
+    ...baseConfig,
     angle: 120,
     origin: { x: 1, y: 0.5 },
   });
-}
+};

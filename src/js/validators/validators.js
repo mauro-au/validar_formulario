@@ -1,7 +1,6 @@
-import { MESSAGES } from './../constants/constants'
-import { validateEmail } from './emailValidator'
-import { validatePhone } from './phoneValidator'
-
+import { MESSAGES } from './../constants/constants';
+import { validateEmail } from './emailValidator';
+import { validatePhone } from './phoneValidator';
 
 export const FIELD_VALIDATORS = {
   email: (input) => validateEmail(input.value),
@@ -11,6 +10,12 @@ export const FIELD_VALIDATORS = {
 };
 
 export const validateInput = (input) => {
+  if (input.type === 'checkbox') {
+    return input.checked
+      ? { valid: true }
+      : { valid: false, message: MESSAGES.empty };
+  }
+
   if (input.value.trim() === '')
     return { valid: false, message: MESSAGES.empty };
 
