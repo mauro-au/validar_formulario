@@ -13,7 +13,7 @@ const clearInputsModal = (FIELDS, checkbox) => {
   checkbox.checked = false;
 };
 
-export const closeModal = ({modal, canvas, modalContent, FIELDS, checkbox}) => {
+export const closeModal = ({modal, canvas, modalContent}) => {
   modal.classList.remove('is-visible');
   modal.classList.add('closing');
   setTimeout(() => {
@@ -23,7 +23,6 @@ export const closeModal = ({modal, canvas, modalContent, FIELDS, checkbox}) => {
     canvas.hidePopover();
     clearModal(modalContent);
   }, 1000);
-  clearInputsModal(FIELDS, checkbox);
 };
 
 export const createModal = ({
@@ -33,6 +32,8 @@ export const createModal = ({
   phone,
   modalContent,
   modal,
+  FIELDS,
+  checkbox,
 }) => {
   const template = document.createElement('template');
   template.innerHTML = `
@@ -56,4 +57,5 @@ export const createModal = ({
   modalContent.appendChild(template.content.cloneNode(true));
   modal.showModal();
   document.body.classList.add('modal-open');
+  clearInputsModal(FIELDS, checkbox);
 };

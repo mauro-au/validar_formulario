@@ -14,13 +14,15 @@ export const handleSuccess = ({
   email,
   phone,
   modalContent,
+  FIELDS,
+  checkbox,
 }) => {
   fechaActual.innerText = new Date().toLocaleDateString('es-ES', DATE_OPTIONS);
 
   loader(registrar);
 
   setTimeout(() => {
-    createModal({userName, nameInput, email, phone, modalContent, modal});
+    createModal({userName, nameInput, email, phone, modalContent, modal, FIELDS, checkbox});
     canvas.showPopover();
     launchConfetti(canvas);
     modal.classList.add('is-visible');

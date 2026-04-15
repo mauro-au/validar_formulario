@@ -27,10 +27,11 @@ export const validateInput = (input) => {
   return { valid: true };
 };
 
-export const handleInput = (e, FIELDS, showError, clearError) => {
-  const input = e.target;
-  if (!FIELDS.includes(input)) return;
-  const result = validateInput(input);
-  if (!result.valid) showError(input, result.message);
-  else clearError(input);
+export const handleInput = ({ target }, FIELDS, showError, clearError) => {
+  if (!FIELDS.includes(target)) return;
+  const result = validateInput(target);
+
+  !result.valid
+    ? showError(target, result.message)
+    : clearError(target);
 };

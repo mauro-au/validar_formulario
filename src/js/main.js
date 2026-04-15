@@ -96,17 +96,21 @@ form.addEventListener('submit', (e) => {
       email,
       phone,
       modalContent,
+      FIELDS,
+      checkbox,
     });
 });
 
 window.addEventListener('resize', resizeCanvas(canvas));
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    closeModal({ modal, canvas, modalContent, FIELDS, checkbox });
+modal.addEventListener('click', ({ target }) => {
+  const isDialog = target.tagName === "DIALOG"
+
+  if (isDialog) {
+    closeModal({ modal, canvas, modalContent });
   }
 });
 
 closeBtn.addEventListener('click', () =>
-  closeModal({ modal, canvas, modalContent, FIELDS, checkbox })
+  closeModal({ modal, canvas, modalContent })
 );
