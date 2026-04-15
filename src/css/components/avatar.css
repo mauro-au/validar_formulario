@@ -1,7 +1,7 @@
 .avatar {
   margin: 30px auto;
   border: 3px solid color-mix(in srgb, var(--color-secondary) 24%, transparent);
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   padding: 10px;
   width: 130px;
 
@@ -14,6 +14,6 @@
   }
 
   img {
-    border-radius: 50%;
+    border-radius: var(--radius-circle);
   }
 }

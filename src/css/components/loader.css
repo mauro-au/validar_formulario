@@ -2,7 +2,7 @@
   width: 24px;
   padding: 4px;
   aspect-ratio: 1;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   background: var(--color-tertiary);
 
   --m:

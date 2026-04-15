@@ -121,7 +121,7 @@ dialog {
       }
 
       img {
-        border-radius: 50%;
+        border-radius: var(--radius-circle);
         border: 3px solid var(--color-secondary);
         padding: 5px;
       }
