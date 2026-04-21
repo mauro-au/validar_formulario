@@ -187,9 +187,13 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 
 🔗 https://validate-form-aurora.netlify.app/
 
+### 👤➕ Crear cuenta
+
 <img width="2427" height="1320" alt="imagen" src="https://github.com/user-attachments/assets/df12411f-97e8-43bb-b87d-5947500b4b59" />
 
 <br/>
+
+### ✅🎉 Modal con resultado de registro
 
 <img width="2509" height="1303" alt="imagen" src="https://github.com/user-attachments/assets/1772aa0e-45b8-4282-bc13-be8a305d78b0" />
 
