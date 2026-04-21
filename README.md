@@ -16,14 +16,18 @@
 <br/>
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSJ3aGl0ZSIgZD0iTTEuNSAwaDIxbC0xLjkxIDIxLjU2M0wxMS45NzcgMjRsLTguNTY0LTIuNDM4TDEuNSAwem0xNy4wOSA0LjQxM0w1LjQxIDQuNDFsLjIxMyAyLjYyMiAxMC4xMjUuMDAyLS4yNTUgMi43MTZoLTYuNjRsLjI0IDIuNTczaDYuMTgybC0uMzY2IDMuNTIzLTIuOTEuODA0LTIuOTU2LS44MS0uMTg4LTIuMTFoLTIuNjFsLjI5IDMuODU1TDEyIDE5LjI4OGw1LjM3My0xLjUzTDE4LjU5IDQuNDE0eiIvPjwvc3ZnPg==&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
+
 ![Stylelint](https://img.shields.io/badge/Stylelint-263238?style=for-the-badge&logo=stylelint&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-F69220?style=for-the-badge&logo=pnpm&logoColor=white)
+![Tabler](https://img.shields.io/badge/Tabler-066FD1?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMC4wMTkgMjIuNDUyYTE3LjUgMTcuNSAwIDAgMCA1LjQ5OC01LjQ0OSAyLjE5NCAyLjE5NCAwIDAgMCAwLTIuMzI4Yy0xLjQzNi0yLjE4LTMuMjctNC4wMTMtNS40OTgtNS40LTEuMDktLjY5My0yLjUyNy0uMjk3LTMuMjIuNzkzLS4wNSAwLS4wNS4wNS0uMDUuMDVhMi4yNzkgMi4yNzkgMCAwIDAgLjg0MiAzLjEyYzEuMTQuNzQzIDIuMTMgMS41ODUgMy4wMjIgMi42MjZhMTEuNzgyIDExLjc4MiAwIDAgMS0zLjAyMiAyLjYyNWMtLjc0My4zOTYtMS4xODkgMS4xODktMS4xODkgMi4wMzFhMi4zOTggMi4zOTggMCAwIDAgMy42MTcgMS45MzJaIi8+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xNy43NDYgMjEuODA4aDUuNjQ3YzEuMDQgMCAxLjg4My0uNDk1IDEuODgzLTEuNDg2IDAtLjk5LS44NDMtMS40ODYtMS44ODMtMS40ODZoLTUuNjQ3Yy0xLjA0IDAtMS44ODIuNDk1LTEuODgyIDEuNDg2IDAgLjk5Ljg0MiAxLjQ4NiAxLjg4MiAxLjQ4NloiLz48L3N2Zz4=&logoColor=white)
+![canvas-confetti](https://img.shields.io/badge/canvas--confetti-000000?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHRleHQgeT0iMjAiIGZvbnQtc2l6ZT0iMjAiPvCfjok8L3RleHQ+PC9zdmc+)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
+
 
 </div>
 
@@ -95,6 +99,8 @@ Página de registro completamente artesanal que demuestra técnicas modernas de 
 - **Stylelint** — linting CSS
 - **ES Modules** — JS dividido en módulos lógicos
 - **pnpm** — gestor de paquetes rápido y eficiente en disco
+- **Netlify** — Para el despliegue a producción
+- **Tabler** — Iteración de iconos para el proyecto
 
 </td>
 </tr>
